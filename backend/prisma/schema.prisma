@@ -1,0 +1,224 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("OPERATOR") // SUPER_ADMIN, ADMIN, ACCOUNTANT, OPERATOR
+  status    String   @default("ACTIVE")   // ACTIVE, INACTIVE
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Patient {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  patientId       String    @unique // e.g. PAT-10023
+  name            String
+  age             Int?
+  gender          String?   // MALE, FEMALE, OTHER
+  mobile          String?
+  address         String?
+  referringDoctor String?
+  billingGroupId  String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  visits          Visit[]
+  billingRecords  BillingRecord[]
+}
+
+model Visit {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  visitId   String   @unique // e.g. VHB26270004935
+  patientId String   @db.ObjectId
+  visitDate DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  patient   Patient  @relation(fields: [patientId], references: [id])
+}
+
+model BillingGroup {
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
+  name                  String   @unique // AYUSHMAN BHARAT, CGHS, PRIVATE, etc.
+  code                  String   @unique
+  defaultDiscountPercent Float   @default(0.0)
+  status                String   @default("ACTIVE") // ACTIVE, DISABLED
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model PathologyService {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  serviceId           String   @unique // e.g. SRV-CBC
+  name                String   @unique // e.g. Complete Blood Count (CBC)
+  category            String   @default("Hematology") // Hematology, Biochemistry, Immunology, Urine, etc.
+  testCode            String?
+  defaultRate         Float    @default(0.0)
+  baseRate            Float    @default(0.0)
+  sellingAmount       Float    @default(0.0)
+  shdplRate           Float?
+  vedaSharePercent    Float?
+  sodaniSharePercent  Float?
+  shdplPercent        Float?
+  status              String   @default("ACTIVE") // ACTIVE, INACTIVE
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model ShareConfiguration {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  partnerName    String    // VEDA, SODANI, SHDPL, OTHER
+  percentage     Float     // e.g. 52.0 for 52%
+  billingGroupId String?   // optional group override
+  serviceId      String?   // optional service override
+  effectiveFrom  DateTime  @default(now())
+  effectiveTo    DateTime?
+  status         String    @default("ACTIVE") // ACTIVE, INACTIVE
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model BillingRecord {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  sNo               Int?
+  billingGroup      String    // AYUSHMAN BHARAT, etc.
+  billDate          DateTime
+  billNo            String
+  visitId           String
+  patientName       String
+  patientId         String?   @db.ObjectId
+  serviceName       String
+  serviceId         String?
+  quantity          Float     @default(1.0)
+  rate              Float     @default(0.0)
+  baseRate          Float     @default(0.0)
+  sellingAmount     Float     @default(0.0)
+  rateType          String    @default("STANDARD")
+  totalAmount       Float     @default(0.0) // Gross
+  discountAmount    Float     @default(0.0)
+  netAmount         Float     @default(0.0)
+  calculationStatus String    @default("CALCULATED")
+
+  // Dynamic Calculated Shares
+  vedaSharePercent  Float     @default(0.0)
+  vedaShare         Float     @default(0.0)
+  sodaniSharePercent Float    @default(0.0)
+  sodaniShare       Float     @default(0.0)
+  shdpl             Float     @default(0.0) // Base rate or reference
+  shdplPercentage   Float     @default(0.0) // %
+  shdplAmount       Float     @default(0.0) // Calculated Share
+  remainingRevenue  Float     @default(0.0)
+
+  remarks           String?
+  settlementStatus  String    @default("PENDING") // PENDING, PARTIALLY_SETTLED, SETTLED
+  settledAmount     Float     @default(0.0)
+  isDeleted         Boolean   @default(false)
+  deletedAt         DateTime?
+  createdById       String?
+  createdByName     String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  patient           Patient?  @relation(fields: [patientId], references: [id])
+  settlementItems   SettlementItem[]
+  adjustments       Adjustment[]
+
+  @@index([billNo])
+  @@index([visitId])
+  @@index([patientName])
+  @@index([billDate])
+  @@index([billingGroup])
+  @@index([serviceName])
+}
+
+model Settlement {
+  id              String           @id @default(auto()) @map("_id") @db.ObjectId
+  settlementRef   String           @unique // e.g. SET-2026-001
+  partnerName     String           // VEDA, SODANI, SHDPL
+  totalAmount     Float
+  paymentDate     DateTime         @default(now())
+  paymentMode     String           @default("BANK_TRANSFER") // BANK_TRANSFER, CHEQUE, CASH, NEFT_RTGS
+  transactionRef  String?
+  notes           String?
+  createdById     String?
+  createdByName   String?
+  createdAt       DateTime         @default(now())
+
+  items           SettlementItem[]
+}
+
+model SettlementItem {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  settlementId    String        @db.ObjectId
+  billingRecordId String        @db.ObjectId
+  partnerName     String
+  amount          Float
+  createdAt       DateTime      @default(now())
+
+  settlement      Settlement    @relation(fields: [settlementId], references: [id], onDelete: Cascade)
+  billingRecord   BillingRecord @relation(fields: [billingRecordId], references: [id])
+}
+
+model Adjustment {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  billingRecordId String        @db.ObjectId
+  type            String        // REFUND, DISCOUNT_ADJUSTMENT, BILLING_CORRECTION, SHARE_ADJUSTMENT
+  amount          Float
+  reason          String
+  approvedBy      String
+  createdBy       String
+  createdAt       DateTime      @default(now())
+
+  billingRecord   BillingRecord @relation(fields: [billingRecordId], references: [id])
+}
+
+model ImportLog {
+  id                   String        @id @default(auto()) @map("_id") @db.ObjectId
+  fileName             String
+  totalRows            Int
+  importedCount        Int
+  duplicateCount       Int
+  invalidCount         Int
+  totalExcelAmount     Float
+  totalImportedAmount  Float
+  discrepancyAmount    Float         @default(0.0)
+  reconciliationStatus String        @default("PENDING") // RECONCILED, DISCREPANCY, PARTIAL
+  createdByName        String?
+  createdAt            DateTime      @default(now())
+
+  errors               ImportError[]
+}
+
+model ImportError {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  importLogId String    @db.ObjectId
+  rowNumber   Int
+  billNo      String?
+  patientName String?
+  errorReason String
+  rawData     String?   // JSON
+  createdAt   DateTime  @default(now())
+
+  importLog   ImportLog @relation(fields: [importLogId], references: [id], onDelete: Cascade)
+}
+
+model AuditLog {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String?
+  userName  String?
+  module    String   // BILLING, SHARE_CONFIG, SETTLEMENT, SERVICE, PATIENT, IMPORT, USER
+  action    String   // CREATE, UPDATE, DELETE, SETTLE, ADJUST, IMPORT, LOGIN
+  recordId  String?
+  oldValue  String?  // JSON
+  newValue  String?  // JSON
+  ipAddress String?
+  timestamp DateTime @default(now())
+}
