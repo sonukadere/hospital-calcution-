@@ -294,48 +294,48 @@ export const MasterRatePage: React.FC = () => {
   };
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-6">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-4 sm:space-y-6">
       {/* Top Banner & Title */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 sm:pb-6 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2 text-emerald-600 font-semibold text-xs uppercase tracking-wider mb-1">
             <Settings2 className="w-4 h-4" />
             Database Configuration
           </div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
             Master Rate Configuration
           </h1>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 mt-0.5 sm:mt-1">
             Set Master Rate and Share % (Veda & Sodani) for each service. All billing calculations strictly use this database.
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <button
             onClick={handleRecalculate}
             disabled={isRecalculating}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm transition-all shadow-xs disabled:opacity-50"
+            className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-xs sm:text-sm transition-all shadow-xs disabled:opacity-50"
             title="Recalculate existing billing records with current master rates"
           >
             <RefreshCw className={`w-4 h-4 ${isRecalculating ? 'animate-spin text-emerald-600' : ''}`} />
-            Recalculate All
+            <span>Recalculate All</span>
           </button>
 
           <button
             onClick={handleOpenImport}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold text-sm transition-all shadow-xs"
+            className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold text-xs sm:text-sm transition-all shadow-xs"
             title="Import Master Rates from an Excel file"
           >
             <FileSpreadsheet className="w-4 h-4" />
-            Upload Excel
+            <span>Upload Excel</span>
           </button>
 
           <button
             onClick={handleOpenAdd}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm shadow-emerald-600/30"
+            className="flex items-center gap-1.5 sm:gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm shadow-emerald-600/30"
           >
             <Plus className="w-4 h-4" />
-            Add Master Rate
+            <span>Add Master Rate</span>
           </button>
         </div>
       </div>
@@ -357,10 +357,11 @@ export const MasterRatePage: React.FC = () => {
       )}
 
       {/* Category / Modality Filter Tabs */}
-      <div className="flex flex-wrap items-center gap-2">
+      {/* Category / Modality Filter Tabs */}
+      <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 custom-scrollbar">
         <button
           onClick={() => setCategory('ALL')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'ALL'
               ? 'bg-slate-900 text-white shadow-sm'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -378,7 +379,7 @@ export const MasterRatePage: React.FC = () => {
 
         <button
           onClick={() => setCategory('CT')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'CT'
               ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -396,7 +397,7 @@ export const MasterRatePage: React.FC = () => {
 
         <button
           onClick={() => setCategory('XRAY')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'XRAY'
               ? 'bg-emerald-600 text-white shadow-sm shadow-emerald-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -414,7 +415,7 @@ export const MasterRatePage: React.FC = () => {
 
         <button
           onClick={() => setCategory('SONO')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'SONO'
               ? 'bg-amber-600 text-white shadow-sm shadow-amber-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -432,7 +433,7 @@ export const MasterRatePage: React.FC = () => {
 
         <button
           onClick={() => setCategory('PATHOLOGY')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'PATHOLOGY'
               ? 'bg-purple-600 text-white shadow-sm shadow-purple-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -450,7 +451,7 @@ export const MasterRatePage: React.FC = () => {
       </div>
 
       {/* Search & Actions Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
         <div className="relative w-full sm:w-96">
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
@@ -458,11 +459,11 @@ export const MasterRatePage: React.FC = () => {
             placeholder="Search by Service Name..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-xs"
+            className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-xs"
           />
         </div>
 
-        <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+        <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end">
           <span className="text-xs font-semibold text-slate-500 px-3 py-1.5 bg-slate-100 rounded-lg">
             {rates.length} Services Displayed
           </span>
@@ -485,25 +486,30 @@ export const MasterRatePage: React.FC = () => {
             <span className="text-sm">Loading Master Rates...</span>
           </div>
         ) : rates.length === 0 ? (
-          <div className="p-16 text-center text-slate-500 flex flex-col items-center justify-center gap-3">
+          <div className="p-12 sm:p-16 text-center text-slate-500 flex flex-col items-center justify-center gap-3">
             <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
               <Calculator className="w-6 h-6" />
             </div>
             <h3 className="font-bold text-slate-800 text-base">No Master Rates Configured</h3>
-            <p className="text-sm text-slate-400 max-w-md">
+            <p className="text-xs sm:text-sm text-slate-400 max-w-md">
               Add services with their Master Rate, Veda Share %, and Sodani Share % to automatically calculate shares during billing uploads.
             </p>
             <button
               onClick={handleOpenAdd}
-              className="mt-2 flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 text-white font-semibold text-sm hover:bg-emerald-700 transition-all"
+              className="mt-2 flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 text-white font-semibold text-xs sm:text-sm hover:bg-emerald-700 transition-all"
             >
               <Plus className="w-4 h-4" />
               Add First Service Rate
             </button>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
+          <div>
+            <div className="md:hidden px-4 py-2 bg-slate-50 border-b border-slate-200 text-[11px] text-slate-500 font-medium flex items-center justify-between">
+              <span>👉 Scroll sideways to view all columns & actions</span>
+              <span className="font-mono text-[10px] bg-slate-200/80 text-slate-600 px-1.5 py-0.5 rounded">6 Columns</span>
+            </div>
+            <div className="overflow-x-auto custom-scrollbar">
+              <table className="w-full text-left text-xs whitespace-nowrap min-w-[720px]">
               <thead className="bg-slate-50/80 text-slate-600 border-b border-slate-200 uppercase text-xs tracking-wider font-semibold">
                 <tr>
                   <th className="py-3.5 px-6">Service Name</th>
@@ -585,6 +591,7 @@ export const MasterRatePage: React.FC = () => {
                 })}
               </tbody>
             </table>
+            </div>
           </div>
         )}
       </div>

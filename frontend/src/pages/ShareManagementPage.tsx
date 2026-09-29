@@ -272,35 +272,35 @@ export const ShareManagementPage: React.FC = () => {
   const currentMonthInfo = availableMonths.find((m) => m.monthKey === selectedMonth);
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-6">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-4 sm:space-y-6">
       {/* Top Banner & Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 sm:pb-6 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2 text-emerald-600 font-semibold text-xs uppercase tracking-wider mb-1">
             <FileSpreadsheet className="w-4 h-4" />
             Monthly Share Distribution Engine
           </div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
             Billing Share Management
           </h1>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 mt-0.5 sm:mt-1">
             Upload monthly billing Excel sheets, isolate by month, compute Veda & Sodani shares, and export.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <button
             onClick={() => setShowUploadModal(true)}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm shadow-emerald-600/30"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm shadow-emerald-600/30"
           >
             <Upload className="w-4 h-4" />
-            Upload Monthly Excel
+            <span>Upload Monthly Excel</span>
           </button>
 
           <button
             onClick={() => handleExport()}
             disabled={records.length === 0}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm transition-all shadow-xs disabled:opacity-40"
+            className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm transition-all shadow-xs disabled:opacity-40"
             title={
               selectedMonth !== 'ALL'
                 ? `Export ${currentMonthInfo?.monthName || selectedMonth} only`
@@ -308,13 +308,13 @@ export const ShareManagementPage: React.FC = () => {
             }
           >
             <Download className="w-4 h-4 text-emerald-600" />
-            Export Excel
+            <span>Export Excel</span>
           </button>
 
           <button
             onClick={handleRecalculate}
             disabled={loading || records.length === 0}
-            className="p-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition-all shadow-xs disabled:opacity-40"
+            className="p-2 sm:p-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition-all shadow-xs disabled:opacity-40"
             title="Recalculate All Shares"
           >
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin text-emerald-600' : ''}`} />
@@ -323,11 +323,11 @@ export const ShareManagementPage: React.FC = () => {
           {records.length > 0 && (
             <button
               onClick={handleClearSelectedMonth}
-              className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-medium text-xs transition-all shadow-xs"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-medium text-xs transition-all shadow-xs"
               title={selectedMonth !== 'ALL' ? `Delete only ${currentMonthInfo?.monthName || selectedMonth} records` : 'Delete all records'}
             >
               <Trash2 className="w-3.5 h-3.5" />
-              {selectedMonth !== 'ALL' ? `Clear ${currentMonthInfo?.monthName || selectedMonth}` : 'Clear All'}
+              <span>{selectedMonth !== 'ALL' ? 'Clear Month' : 'Clear All'}</span>
             </button>
           )}
         </div>
@@ -378,9 +378,9 @@ export const ShareManagementPage: React.FC = () => {
       )}
 
       {/* KPI Summary Cards (Scoped to selected month) */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {/* Total Records */}
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+        <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs">
           <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider flex items-center justify-between">
             <span>Total Bills / Items</span>
             {selectedMonth !== 'ALL' && (
@@ -399,7 +399,7 @@ export const ShareManagementPage: React.FC = () => {
         </div>
 
         {/* Total Net Amount */}
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+        <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs">
           <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider flex items-center justify-between">
             <span>Total Net Billed Amt</span>
             {selectedMonth !== 'ALL' && (
@@ -417,7 +417,7 @@ export const ShareManagementPage: React.FC = () => {
         </div>
 
         {/* Veda Share */}
-        <div className="bg-gradient-to-br from-blue-50/50 to-white p-5 rounded-2xl border border-blue-200/80 shadow-xs">
+        <div className="bg-gradient-to-br from-blue-50/50 to-white p-4 sm:p-5 rounded-2xl border border-blue-200/80 shadow-xs">
           <div className="text-xs font-semibold text-blue-700 uppercase tracking-wider flex items-center justify-between">
             <span>Veda Share</span>
             <span className="px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 text-[10px] font-bold">
@@ -433,7 +433,7 @@ export const ShareManagementPage: React.FC = () => {
         </div>
 
         {/* Sodani Share */}
-        <div className="bg-gradient-to-br from-emerald-50/50 to-white p-5 rounded-2xl border border-emerald-200/80 shadow-xs">
+        <div className="bg-gradient-to-br from-emerald-50/50 to-white p-4 sm:p-5 rounded-2xl border border-emerald-200/80 shadow-xs">
           <div className="text-xs font-semibold text-emerald-700 uppercase tracking-wider flex items-center justify-between">
             <span>Sodani Share</span>
             <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[10px] font-bold">
@@ -450,10 +450,10 @@ export const ShareManagementPage: React.FC = () => {
       </div>
 
       {/* Category / Modality Filter Tabs */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 custom-scrollbar">
         <button
           onClick={() => setCategory('ALL')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'ALL'
               ? 'bg-slate-900 text-white shadow-sm'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -471,7 +471,7 @@ export const ShareManagementPage: React.FC = () => {
 
         <button
           onClick={() => setCategory('CT')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'CT'
               ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -489,7 +489,7 @@ export const ShareManagementPage: React.FC = () => {
 
         <button
           onClick={() => setCategory('XRAY')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'XRAY'
               ? 'bg-emerald-600 text-white shadow-sm shadow-emerald-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -507,7 +507,7 @@ export const ShareManagementPage: React.FC = () => {
 
         <button
           onClick={() => setCategory('SONO')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'SONO'
               ? 'bg-amber-600 text-white shadow-sm shadow-amber-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -525,7 +525,7 @@ export const ShareManagementPage: React.FC = () => {
 
         <button
           onClick={() => setCategory('PATHOLOGY')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             category === 'PATHOLOGY'
               ? 'bg-purple-600 text-white shadow-sm shadow-purple-500/30'
               : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
@@ -543,28 +543,28 @@ export const ShareManagementPage: React.FC = () => {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200 shadow-xs flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 sm:gap-4">
         {/* Search Input */}
-        <div className="relative w-full md:w-80">
+        <div className="relative w-full lg:w-80">
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search Patient, Bill No, Service..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium"
+            className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all font-medium"
           />
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:flex items-center gap-2.5 sm:gap-3 w-full lg:w-auto">
           {/* Month Selector Filter */}
           <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-1.5 focus-within:ring-2 focus-within:ring-emerald-500/20">
-            <Calendar className="w-3.5 h-3.5 text-slate-400" />
+            <Calendar className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             <select
               value={selectedMonth}
               onChange={(e) => setSelectedMonth(e.target.value)}
-              className="text-xs font-semibold bg-transparent border-none outline-none text-slate-700 cursor-pointer pr-1"
+              className="w-full text-xs font-semibold bg-transparent border-none outline-none text-slate-700 cursor-pointer pr-1"
             >
               <option value="ALL">
                 All Months ({availableMonths.reduce((acc, m) => acc + m.count, 0)})
@@ -581,7 +581,7 @@ export const ShareManagementPage: React.FC = () => {
           <select
             value={selectedGroup}
             onChange={(e) => setSelectedGroup(e.target.value)}
-            className="px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-700 cursor-pointer"
+            className="w-full lg:w-auto px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-700 cursor-pointer"
           >
             <option value="ALL">All Billing Groups</option>
             {billingGroups.map((g) => (
@@ -595,7 +595,7 @@ export const ShareManagementPage: React.FC = () => {
           <select
             value={matchFilter}
             onChange={(e) => setMatchFilter(e.target.value)}
-            className="px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-700"
+            className="w-full lg:w-auto px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-700 cursor-pointer"
           >
             <option value="">All Statuses</option>
             <option value="true">Matched Only</option>
@@ -612,27 +612,32 @@ export const ShareManagementPage: React.FC = () => {
             <span className="text-sm font-medium">Loading billing data...</span>
           </div>
         ) : records.length === 0 ? (
-          <div className="p-20 text-center text-slate-500 flex flex-col items-center justify-center gap-3">
+          <div className="p-12 sm:p-20 text-center text-slate-500 flex flex-col items-center justify-center gap-3">
             <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
               <FileSpreadsheet className="w-7 h-7" />
             </div>
-            <h3 className="font-bold text-slate-800 text-lg">No Billing Data Found</h3>
-            <p className="text-sm text-slate-400 max-w-md">
+            <h3 className="font-bold text-slate-800 text-base sm:text-lg">No Billing Data Found</h3>
+            <p className="text-xs sm:text-sm text-slate-400 max-w-md">
               {selectedMonth !== 'ALL'
                 ? `No records found for ${currentMonthInfo?.monthName || selectedMonth}.`
                 : 'Upload your monthly billing Excel file to compute and view the 15-column share distribution.'}
             </p>
             <button
               onClick={() => setShowUploadModal(true)}
-              className="mt-3 flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-sm hover:bg-emerald-700 transition-all shadow-sm"
+              className="mt-3 flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-xs sm:text-sm hover:bg-emerald-700 transition-all shadow-sm"
             >
               <Upload className="w-4 h-4" />
               Upload Monthly Excel
             </button>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs whitespace-nowrap">
+          <div>
+            <div className="lg:hidden px-4 py-2 bg-slate-50 border-b border-slate-200 text-[11px] text-slate-500 font-medium flex items-center justify-between">
+              <span>👉 Scroll sideways to see all 15 share columns</span>
+              <span className="font-mono text-[10px] bg-slate-200/80 text-slate-600 px-1.5 py-0.5 rounded">15 Columns</span>
+            </div>
+            <div className="overflow-x-auto custom-scrollbar">
+              <table className="w-full text-left text-xs whitespace-nowrap min-w-[1000px]">
               <thead className="bg-slate-50 text-slate-600 border-b border-slate-200 uppercase font-bold tracking-wider sticky top-0">
                 <tr>
                   <th className="py-3 px-4 text-center">SNo</th>
@@ -775,6 +780,7 @@ export const ShareManagementPage: React.FC = () => {
                 })}
               </tbody>
             </table>
+            </div>
           </div>
         )}
 
@@ -812,14 +818,14 @@ export const ShareManagementPage: React.FC = () => {
 
       {/* Upload Monthly Excel Modal */}
       {showUploadModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl w-full max-w-lg overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-            <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/50 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl w-full max-w-lg max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            <div className="px-4 sm:px-5 py-3.5 sm:py-4 border-b border-slate-100 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                   <Upload className="w-5 h-5" />
                 </div>
-                <h3 className="font-bold text-slate-900 text-base">
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
                   Upload Monthly Billing Excel
                 </h3>
               </div>
@@ -831,7 +837,7 @@ export const ShareManagementPage: React.FC = () => {
               </button>
             </div>
 
-            <form onSubmit={handleUploadSubmit} className="p-5 space-y-4">
+            <form onSubmit={handleUploadSubmit} className="p-4 sm:p-5 space-y-4 overflow-y-auto custom-scrollbar">
               <input
                 type="file"
                 ref={fileInputRef}
@@ -911,15 +917,15 @@ export const ShareManagementPage: React.FC = () => {
 
       {/* Review Unmatched Services Modal */}
       {showUnmatchedModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 max-h-[85vh] flex flex-col">
-            <div className="p-5 border-b border-slate-100 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 max-h-[88vh] flex flex-col">
+            <div className="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between shrink-0">
               <div>
-                <h3 className="font-bold text-slate-900 text-base">
+                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
                   Unmatched Services in Uploaded Billing
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Configure Master Rates for these services to automatically compute Veda and Sodani shares.
+                  Configure Master Rates for these services to automatically compute shares.
                 </p>
               </div>
               <button
@@ -930,7 +936,7 @@ export const ShareManagementPage: React.FC = () => {
               </button>
             </div>
 
-            <div className="p-5 overflow-y-auto flex-1 space-y-3">
+            <div className="p-3.5 sm:p-5 overflow-y-auto flex-1 space-y-3 custom-scrollbar">
               {unmatchedList.length === 0 ? (
                 <div className="p-8 text-center text-slate-500 text-sm">
                   <CheckCircle2 className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
@@ -940,13 +946,13 @@ export const ShareManagementPage: React.FC = () => {
                 unmatchedList.map((item) => (
                   <div
                     key={item.serviceName}
-                    className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-between gap-4"
+                    className="p-3 sm:p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
                   >
                     <div>
-                      <div className="font-bold text-sm text-slate-900 uppercase">
+                      <div className="font-bold text-xs sm:text-sm text-slate-900 uppercase">
                         {item.serviceName}
                       </div>
-                      <div className="text-xs text-slate-500 mt-0.5 font-mono">
+                      <div className="text-[11px] sm:text-xs text-slate-500 mt-0.5 font-mono">
                         Found in {item.occurrenceCount} record(s) | Sample Rate: ₹{item.sampleRate}
                       </div>
                     </div>
@@ -962,7 +968,7 @@ export const ShareManagementPage: React.FC = () => {
                           sodaniPct: 100,
                         });
                       }}
-                      className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors shrink-0 flex items-center gap-1.5"
+                      className="w-full sm:w-auto justify-center px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors shrink-0 flex items-center gap-1.5"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       Configure Rate

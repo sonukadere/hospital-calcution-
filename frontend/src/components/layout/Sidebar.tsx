@@ -4,7 +4,8 @@ import {
   FileSpreadsheet,
   Layers,
   Cpu,
-  Sparkles
+  Sparkles,
+  X
 } from 'lucide-react';
 
 interface SidebarItemProps {
@@ -13,13 +14,15 @@ interface SidebarItemProps {
   label: string;
   badge?: string;
   end?: boolean;
+  onClick?: () => void;
 }
 
-function SidebarItem({ to, icon, label, badge, end }: SidebarItemProps) {
+function SidebarItem({ to, icon, label, badge, end, onClick }: SidebarItemProps) {
   return (
     <NavLink
       to={to}
       end={end}
+      onClick={onClick}
       className={({ isActive }) =>
         `flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
           isActive
@@ -41,11 +44,16 @@ function SidebarItem({ to, icon, label, badge, end }: SidebarItemProps) {
   );
 }
 
-export const Sidebar: React.FC = () => {
-  return (
-    <aside className="w-64 bg-white border-r border-slate-200/90 flex flex-col h-screen sticky top-0 select-none shadow-xs z-30 shrink-0">
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen = false, onClose }) => {
+  const sidebarContent = (
+    <div className="flex flex-col h-full bg-white select-none">
       {/* Brand Header */}
-      <div className="p-5 border-b border-slate-100">
+      <div className="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shrink-0 shadow-sm shadow-blue-500/30">
             <Sparkles className="w-5 h-5" />
@@ -59,6 +67,17 @@ export const Sidebar: React.FC = () => {
             </p>
           </div>
         </div>
+
+        {/* Mobile Close Button */}
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="md:hidden p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+            aria-label="Close sidebar"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        )}
       </div>
 
       {/* Navigation Links */}
@@ -70,12 +89,14 @@ export const Sidebar: React.FC = () => {
           to="/share-management"
           icon={<FileSpreadsheet className="w-4 h-4" />}
           label="Share Management"
+          onClick={onClose}
         />
         <SidebarItem
           to="/master-rates"
           icon={<Layers className="w-4 h-4" />}
           label="Master Rates"
           badge="1,409"
+          onClick={onClose}
         />
       </div>
 
@@ -92,9 +113,35 @@ export const Sidebar: React.FC = () => {
           <Cpu className="w-4 h-4 text-slate-400" />
         </div>
       </div>
-    </aside>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Desktop Persistent Sidebar */}
+      <aside className="hidden md:flex w-64 border-r border-slate-200/90 flex-col h-screen sticky top-0 shadow-xs z-30 shrink-0">
+        {sidebarContent}
+      </aside>
+
+      {/* Mobile Drawer Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-40 md:hidden transition-opacity duration-300"
+          onClick={onClose}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile Off-Canvas Drawer */}
+      <div
+        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] shadow-2xl md:hidden transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {sidebarContent}
+      </div>
+    </>
   );
 };
 
 export default Sidebar;
-
