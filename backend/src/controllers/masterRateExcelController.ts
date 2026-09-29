@@ -1,17 +1,14 @@
 import { Request, Response } from 'express';
 import * as xlsx from 'xlsx';
-import { MasterRate, BillingShareRecord } from '../models';
+import { store } from '../store/inMemoryStore';
 
 /**
- * Excel import support for the Master Rate List.
+ * Excel import support for the Master Rate List (In-Memory).
  *
  * Endpoints:
  *  POST /api/master-rates/import/preview  - parse + validate an uploaded file, return a preview (no writes)
- *  POST /api/master-rates/import/commit   - re-parse the same file and persist the valid rows
+ *  POST /api/master-rates/import/commit   - re-parse the same file and persist in memory
  *  GET  /api/master-rates/import/template - download a blank template workbook
- *
- * The commit step always re-parses the uploaded file, so the preview and the
- * saved data are guaranteed to come from the exact same parsing/validation code.
  */
 
 const ALLOWED_EXTENSIONS = ['.xlsx', '.xls', '.xlsm'];
@@ -48,7 +45,6 @@ const RATE_HEADER_PATTERNS: RegExp[] = [
 ];
 
 // Total / subtotal rows are structural noise in rate lists, never real services.
-// The whole cell must be a total label so real tests such as "Total Bilirubin" are kept.
 const SUMMARY_ROW_PATTERN =
   /^(sub[\s\-_]*total|grand[\s\-_]*total|billing[\s\-_]*total|amount[\s\-_]*total|net[\s\-_]*total|total|sum)(\s*[:\-–]\s*\S+)?$/i;
 
@@ -86,7 +82,7 @@ function isBlank(value: any): boolean {
   return value === null || value === undefined || String(value).trim() === '';
 }
 
-/** Parse a spreadsheet cell into a number. Handles currency symbols, prefixes, commas and stray text. */
+/** Parse a spreadsheet cell into a number. */
 function parseNumeric(value: any): number | null {
   if (typeof value === 'number') return Number.isFinite(value) ? value : null;
   if (typeof value === 'boolean') return null;
@@ -95,8 +91,6 @@ function parseNumeric(value: any): number | null {
   let text = String(value).trim().toLowerCase();
   if (text.endsWith('%')) text = text.slice(0, -1);
 
-  // Strip currency symbols, grouping separators and whitespace first so that
-  // "Rs. 1,450.50" and "INR 2,000" reduce to bare numbers.
   text = text.replace(/[₹$€£,]/g, '').replace(/\s/g, '');
   text = text.replace(/^(rs\.?|inr|mrp|usd|amt\.?|amount)[:.]?/, '');
 
@@ -106,11 +100,6 @@ function parseNumeric(value: any): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-/**
- * Parse a share cell into a percentage.
- * Handles "20%" / "20 %" literally, and the decimal form used by the hospital
- * rate lists (0.52 => 52%).
- */
 function parsePercent(value: any): number | null {
   if (isBlank(value)) return null;
   let parsed = parseNumeric(value);
@@ -161,7 +150,7 @@ function buildColumnMapping(headers: string[]): Record<FieldKey, number | null> 
   const isShareish = (header: string) => SHARE_HEADER_PATTERN.test(header);
   const isRateish = (header: string) => RATE_HEADER_PATTERNS.some((p) => p.test(header));
 
-  // 1. Service name - must be resolved first so the share pass can avoid "Veda Test Name" style headers.
+  // 1. Service name
   for (let i = 0; i < headers.length; i++) {
     if (!headers[i] || used.has(i)) continue;
     if (isServiceish(headers[i])) {
@@ -171,7 +160,7 @@ function buildColumnMapping(headers: string[]): Record<FieldKey, number | null> 
     }
   }
 
-  // 2. Sodani share % (optional - the app always stores 100 - Veda).
+  // 2. Sodani share %
   for (let i = 0; i < headers.length; i++) {
     if (!headers[i] || used.has(i) || isServiceish(headers[i]) || isRateish(headers[i])) continue;
     if (/sodani/i.test(headers[i])) {
@@ -181,8 +170,7 @@ function buildColumnMapping(headers: string[]): Record<FieldKey, number | null> 
     }
   }
 
-  // 3. Veda share % (optional - defaults to 0). Columns that are really rate columns
-  //    such as "Test Amount [Veda Hospital (2024)]" are left for the rate pass below.
+  // 3. Veda share %
   for (let i = 0; i < headers.length; i++) {
     if (!headers[i] || used.has(i) || isServiceish(headers[i]) || isRateish(headers[i])) continue;
     if (isShareish(headers[i])) {
@@ -192,7 +180,7 @@ function buildColumnMapping(headers: string[]): Record<FieldKey, number | null> 
     }
   }
 
-  // 4. Master rate (required).
+  // 4. Master rate
   for (let i = 0; i < headers.length; i++) {
     if (!headers[i] || used.has(i)) continue;
     if (isRateish(headers[i])) {
@@ -223,7 +211,7 @@ function parseDataRows(
     const rawName = read(raw, 'serviceName');
     const rawRate = read(raw, 'masterRate');
 
-    if (isBlank(rawName) && isBlank(rawRate)) continue; // blank spacer row
+    if (isBlank(rawName) && isBlank(rawRate)) continue;
 
     const rowNumber = r + 1;
     const serviceName = isBlank(rawName) ? '' : String(rawName).trim();
@@ -288,7 +276,7 @@ function parseDataRows(
       );
     }
 
-    // Duplicate detection inside the uploaded file (case/whitespace insensitive).
+    // Duplicate detection inside the uploaded file
     if (serviceName) {
       const key = normalizeText(serviceName);
       const previous = firstSeenAt.get(key);
@@ -402,8 +390,8 @@ function validateUpload(req: Request): { buffer: Buffer; fileName: string } {
   return { buffer: req.file.buffer, fileName };
 }
 
-async function enrichRows(rows: ParsedRow[]): Promise<EnrichedRow[]> {
-  const existingRates = await MasterRate.find({}).select('serviceName masterRate');
+function enrichRows(rows: ParsedRow[]): EnrichedRow[] {
+  const existingRates = store.findAllMasterRates();
   const existingByName = new Map<string, { masterRate: number }>();
   existingRates.forEach((mr) => {
     existingByName.set(normalizeText(mr.serviceName), { masterRate: mr.masterRate });
@@ -460,7 +448,7 @@ export const previewMasterRateExcel = async (req: Request, res: Response) => {
       });
     }
 
-    const rows = await enrichRows(parsed.rows);
+    const rows = enrichRows(parsed.rows);
 
     return res.json({
       fileName: parsed.fileName,
@@ -486,7 +474,7 @@ export const importMasterRateExcel = async (req: Request, res: Response) => {
     const skipExisting = String(req.body?.skipExisting) === 'true';
 
     const parsed = parseWorkbook(buffer, fileName);
-    const rows = await enrichRows(parsed.rows);
+    const rows = enrichRows(parsed.rows);
     const summary = buildSummary(rows);
 
     if (summary.validCount === 0) {
@@ -496,55 +484,41 @@ export const importMasterRateExcel = async (req: Request, res: Response) => {
       });
     }
 
-    const existingRates = await MasterRate.find({}).select('_id serviceName');
-    const existingByName = new Map<string, string>();
-    existingRates.forEach((mr) => {
-      existingByName.set(normalizeText(mr.serviceName), String(mr._id));
-    });
+    let inserted = 0;
+    let updated = 0;
+    let skippedExisting = 0;
 
-    const operations: any[] = [];
     const changedEntries: Array<{
       serviceName: string;
       masterRate: number;
       vedaPct: number;
       sodaniPct: number;
     }> = [];
-    let inserted = 0;
-    let updated = 0;
-    let skippedExisting = 0;
 
     for (const row of rows) {
       if (row.status === 'error') continue;
 
-      const existingId = existingByName.get(normalizeText(row.serviceName));
+      const existing = store.findMasterRateByName(row.serviceName);
       const masterRate = row.masterRate as number;
-      const values = {
-        masterRate,
-        vedaSharePercent: row.vedaSharePercent,
-        sodaniSharePercent: row.sodaniSharePercent,
-      };
 
-      if (existingId) {
+      if (existing) {
         if (skipExisting) {
           skippedExisting++;
           continue;
         }
-        operations.push({
-          updateOne: {
-            filter: { _id: existingId },
-            update: { $set: values },
-          },
+        store.updateMasterRate(existing._id, {
+          masterRate,
+          vedaSharePercent: row.vedaSharePercent,
+          sodaniSharePercent: row.sodaniSharePercent,
         });
         updated++;
       } else {
-        operations.push({
-          updateOne: {
-            filter: { serviceName: row.serviceName },
-            update: { $set: { serviceName: row.serviceName, ...values } },
-            upsert: true,
-          },
+        store.createMasterRate({
+          serviceName: row.serviceName,
+          masterRate,
+          vedaSharePercent: row.vedaSharePercent,
+          sodaniSharePercent: row.sodaniSharePercent,
         });
-        existingByName.set(normalizeText(row.serviceName), `__new_${inserted}`);
         inserted++;
       }
 
@@ -556,11 +530,10 @@ export const importMasterRateExcel = async (req: Request, res: Response) => {
       });
     }
 
-    if (operations.length > 0) {
-      await MasterRate.bulkWrite(operations, { ordered: false });
+    // Recalculate billing records for changed services
+    for (const entry of changedEntries) {
+      store.updateBillingRecordsForService(entry.serviceName, entry.masterRate, entry.vedaPct, entry.sodaniPct);
     }
-
-    await recalculateBillingRecords(changedEntries);
 
     return res.json({
       message: `Imported ${inserted + updated} master rate(s) from ${fileName}`,
@@ -601,54 +574,3 @@ export const downloadMasterRateTemplate = async (_req: Request, res: Response) =
     return res.status(500).json({ error: error.message || 'Failed to build the template file' });
   }
 };
-
-/**
- * Recompute shares for billing records belonging to the imported services.
- * Uses the same formulas as the single-record master rate handlers, but resolves
- * every affected service in a single query + bulkWrite.
- */
-async function recalculateBillingRecords(
-  entries: Array<{ serviceName: string; masterRate: number; vedaPct: number; sodaniPct: number }>
-) {
-  if (entries.length === 0) return;
-
-  const lookup = new Map<string, (typeof entries)[number]>();
-  entries.forEach((entry) => lookup.set(normalizeText(entry.serviceName), entry));
-
-  const pattern = new RegExp(`^(${entries.map((e) => escapeRegex(e.serviceName)).join('|')})$`, 'i');
-  const records = await BillingShareRecord.find({ serviceName: pattern });
-
-  const operations = records
-    .map((rec) => {
-      const entry = lookup.get(normalizeText(rec.serviceName));
-      if (!entry) return null;
-
-      const qty = rec.qty || 1;
-      const masterAmount = round2(entry.masterRate * qty);
-      const vedaShare = round2((masterAmount * entry.vedaPct) / 100);
-      const sodaniShare = round2((masterAmount * entry.sodaniPct) / 100);
-
-      return {
-        updateOne: {
-          filter: { _id: rec._id },
-          update: {
-            $set: {
-              masterRate: entry.masterRate,
-              masterAmount,
-              vedaSharePercent: entry.vedaPct,
-              sodaniSharePercent: entry.sodaniPct,
-              percent: `Veda: ${entry.vedaPct}% | Sodani: ${entry.sodaniPct}%`,
-              vedaShare,
-              sodaniShare,
-              isMatched: true,
-            },
-          },
-        },
-      };
-    })
-    .filter(Boolean) as any[];
-
-  if (operations.length > 0) {
-    await BillingShareRecord.bulkWrite(operations);
-  }
-}

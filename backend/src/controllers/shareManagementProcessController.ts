@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import * as xlsx from 'xlsx';
-import { MasterRate } from '../models';
+import { store } from '../store/inMemoryStore';
 
 // Format Excel serial date to readable string
 function formatExcelDate(value: any): string {
@@ -138,7 +138,7 @@ export const processShareManagementExcel = async (req: Request, res: Response) =
     }
 
     // Load Master Rates into lookup map
-    const masterRates = await MasterRate.find({});
+    const masterRates = store.findAllMasterRates();
     const rateMap = new Map<string, { masterRate: number; vedaPct: number; sodaniPct: number }>();
     masterRates.forEach((mr) => {
       const vedaPct = Math.min(100, Math.max(0, Number(mr.vedaSharePercent) || 0));

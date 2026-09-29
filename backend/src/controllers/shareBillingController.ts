@@ -1,13 +1,12 @@
 import { Request, Response } from 'express';
 import * as xlsx from 'xlsx';
-import { MasterRate, BillingShareRecord } from '../models';
+import { store } from '../store/inMemoryStore';
 
 // Format Excel serial date to readable string
 function formatExcelDate(value: any): { formatted: string; date?: Date } {
   if (!value) return { formatted: '' };
 
   if (typeof value === 'number') {
-    // Excel serial date to JS Date
     const utc_days = Math.floor(value - 25569);
     const utc_value = utc_days * 86400;
     const date_info = new Date(utc_value * 1000);
@@ -53,7 +52,7 @@ function formatExcelDate(value: any): { formatted: string; date?: Date } {
   return { formatted: str };
 }
 
-// Extract Month Name and Month Key (e.g. "August 2026", "2026-08")
+// Extract Month Name and Month Key
 function extractMonthInfo(
   date?: Date,
   dateStr?: string,
@@ -127,7 +126,7 @@ function normalizeText(text: any): string {
   return String(text).trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
-// Upload & Process Excel File with Monthly Segregation
+// Upload & Process Excel File with Monthly Segregation (In-Memory)
 export const uploadAndProcessExcel = async (req: Request, res: Response) => {
   try {
     if (!req.file) {
@@ -135,12 +134,7 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
     }
 
     const { targetMonth, replaceMode = 'month' } = req.body;
-    // replaceMode can be:
-    // - 'month' (default: replaces only records for this file's month)
-    // - 'all' (wipes all billing records)
-    // - 'append' (appends without deleting previous)
 
-    // Read workbook from buffer
     const workbook = xlsx.read(req.file.buffer, { type: 'buffer' });
     const sheetName = workbook.SheetNames[0];
     if (!sheetName) {
@@ -218,8 +212,8 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
       });
     }
 
-    // Load all master rates into lookup map
-    const masterRates = await MasterRate.find({});
+    // Load all master rates from in-memory store into lookup map
+    const masterRates = store.findAllMasterRates();
     const rateMap = new Map<string, { masterRate: number; vedaPct: number; sodaniPct: number }>();
     masterRates.forEach((mr) => {
       const vedaPct = Math.min(100, Math.max(0, Number(mr.vedaSharePercent) || 0));
@@ -236,7 +230,6 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
     let matchedCount = 0;
     let skippedCount = 0;
 
-    // Track detected months in the sheet
     const monthFrequencyMap = new Map<string, { count: number; name: string }>();
 
     let itemRowIndex = 0;
@@ -258,11 +251,10 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
       const rawDate = colIndex['billDate'] !== undefined ? row[colIndex['billDate']] : undefined;
       const { formatted: billServiceDate, date: billDateRaw } = formatExcelDate(rawDate);
 
-      // Determine month for this record
       const { monthName, monthKey } = extractMonthInfo(
         billDateRaw,
         billServiceDate,
-        req.file.originalname,
+        req.file!.originalname,
         targetMonth
       );
 
@@ -282,7 +274,6 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
       const normService = normalizeText(serviceName);
       const matchedRate = rateMap.get(normService);
 
-      // Skip record if master rate or share rate is unknown
       if (!matchedRate || !matchedRate.masterRate || matchedRate.masterRate <= 0) {
         skippedCount++;
         skippedServicesSet.add(serviceName);
@@ -293,11 +284,8 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
       const vedaSharePercent = Math.min(100, Math.max(0, matchedRate.vedaPct));
       const sodaniSharePercent = Math.max(0, 100 - vedaSharePercent);
 
-      // Master Amount = Master Rate × Qty
       const masterAmount = Math.round(masterRate * qty * 100) / 100;
-      // Veda Share = Master Amount × Veda Share % / 100
       const vedaShare = Math.round(((masterAmount * vedaSharePercent) / 100) * 100) / 100;
-      // Sodani Share = Master Amount × Sodani Share % / 100
       const sodaniShare = Math.round(((masterAmount * sodaniSharePercent) / 100) * 100) / 100;
       const percent = `Veda: ${vedaSharePercent}% | Sodani: ${sodaniSharePercent}%`;
 
@@ -328,23 +316,22 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
         isMatched: true,
         billingMonth: monthName,
         billingMonthKey: monthKey,
-        batchName: req.file.originalname,
+        batchName: req.file!.originalname,
+        batchId: 'default',
       });
     }
 
-    // Determine the distinct month keys in this upload
     const uploadedMonthKeys = Array.from(monthFrequencyMap.keys());
 
-    // Handle replacement modes
+    // Handle replacement modes (in-memory)
     if (replaceMode === 'all') {
-      await BillingShareRecord.deleteMany({});
+      store.clearAllBillingRecords();
     } else if (replaceMode === 'month' && uploadedMonthKeys.length > 0) {
-      // Delete existing records only for the month(s) being uploaded
-      await BillingShareRecord.deleteMany({ billingMonthKey: { $in: uploadedMonthKeys } });
+      store.deleteBillingByMonthKeys(uploadedMonthKeys);
     }
 
     if (recordsToInsert.length > 0) {
-      await BillingShareRecord.insertMany(recordsToInsert);
+      store.insertBillingRecords(recordsToInsert);
     }
 
     return res.json({
@@ -364,7 +351,7 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
   }
 };
 
-// Query Processed Billing Records with Monthly filtering & statistics
+// Query Processed Billing Records with Monthly filtering & statistics (In-Memory)
 export const getBillingRecords = async (req: Request, res: Response) => {
   try {
     const {
@@ -379,160 +366,28 @@ export const getBillingRecords = async (req: Request, res: Response) => {
       sortOrder = 'asc',
     } = req.query;
 
-    const query: any = {};
-
-    if (monthKey && typeof monthKey === 'string' && monthKey !== 'ALL') {
-      query.billingMonthKey = monthKey.trim();
-    }
-
-    if (search && typeof search === 'string') {
-      const trimmed = search.trim();
-      query.$or = [
-        { patientName: { $regex: trimmed, $options: 'i' } },
-        { billNo: { $regex: trimmed, $options: 'i' } },
-        { visitId: { $regex: trimmed, $options: 'i' } },
-        { serviceName: { $regex: trimmed, $options: 'i' } },
-      ];
-    }
-
-    if (billingGroup && typeof billingGroup === 'string' && billingGroup !== 'ALL') {
-      query.billingGroup = billingGroup.trim();
-    }
-
-    if (isMatched !== undefined && isMatched !== '') {
-      query.isMatched = isMatched === 'true';
-    }
-
-    if (category === 'CT') {
-      query.serviceName = { $regex: '(^|\\s|/)CT(\\s|/|$)', $options: 'i' };
-    } else if (category === 'XRAY') {
-      query.serviceName = { $regex: 'X-?RAY', $options: 'i' };
-    } else if (category === 'SONO') {
-      query.serviceName = { $regex: '(SONO|DOPPLER|MAMMO|USG|^CD\\s)', $options: 'i' };
-    } else if (category === 'PATHOLOGY') {
-      query.serviceName = { $not: { $regex: '((^|\\s|/)CT(\\s|/|$)|X-?RAY|SONO|DOPPLER|MAMMO|USG|^CD\\s)', $options: 'i' } };
-    }
-
-    const pageNum = parseInt(page as string, 10) || 1;
-    const limitNum = parseInt(limit as string, 10) || 50;
-    const skip = (pageNum - 1) * limitNum;
-    const sortField = sortBy === 'sNo' || sortBy === 'rowIndex' ? 'rowIndex' : (sortBy as string);
-    const sortDirection = sortOrder === 'desc' ? -1 : 1;
-
-    const [records, total] = await Promise.all([
-      BillingShareRecord.find(query)
-        .sort({ [sortField]: sortDirection, _id: sortDirection })
-        .skip(skip)
-        .limit(limitNum),
-      BillingShareRecord.countDocuments(query),
-    ]);
-
-    // Aggregate summary stats for the current filter (including month)
-    const statsAgg = await BillingShareRecord.aggregate([
-      { $match: query },
-      {
-        $group: {
-          _id: null,
-          totalQty: { $sum: '$qty' },
-          totalGross: { $sum: '$totalAmt' },
-          totalDiscount: { $sum: '$discAmt' },
-          totalNet: { $sum: '$netAmt' },
-          totalMasterAmount: { $sum: '$masterAmount' },
-          totalVedaShare: { $sum: '$vedaShare' },
-          totalSodaniShare: { $sum: '$sodaniShare' },
-          unmatchedCount: {
-            $sum: { $cond: [{ $eq: ['$isMatched', false] }, 1, 0] },
-          },
-        },
-      },
-    ]);
-
-    const stats = statsAgg[0] || {
-      totalQty: 0,
-      totalGross: 0,
-      totalDiscount: 0,
-      totalNet: 0,
-      totalMasterAmount: 0,
-      totalVedaShare: 0,
-      totalSodaniShare: 0,
-      unmatchedCount: 0,
-    };
-
-    stats.totalGross = Math.round(stats.totalGross * 100) / 100;
-    stats.totalDiscount = Math.round(stats.totalDiscount * 100) / 100;
-    stats.totalNet = Math.round(stats.totalNet * 100) / 100;
-    stats.totalMasterAmount = Math.round(stats.totalMasterAmount * 100) / 100;
-    stats.totalVedaShare = Math.round(stats.totalVedaShare * 100) / 100;
-    stats.totalSodaniShare = Math.round(stats.totalSodaniShare * 100) / 100;
-
-    // Modality category counts (scoped to current month filter if set)
-    const modalityFilter: any = (typeof monthKey === 'string' && monthKey !== 'ALL') ? { billingMonthKey: monthKey } : {};
-    const [allCount, ctCount, xrayCount, sonoCount] = await Promise.all([
-      BillingShareRecord.countDocuments(modalityFilter),
-      BillingShareRecord.countDocuments({ ...modalityFilter, serviceName: { $regex: '(^|\\s|/)CT(\\s|/|$)', $options: 'i' } }),
-      BillingShareRecord.countDocuments({ ...modalityFilter, serviceName: { $regex: 'X-?RAY', $options: 'i' } }),
-      BillingShareRecord.countDocuments({ ...modalityFilter, serviceName: { $regex: '(SONO|DOPPLER|MAMMO|USG|^CD\\s)', $options: 'i' } }),
-    ]);
-
-    const modalityCounts = {
-      all: allCount,
-      ct: ctCount,
-      xray: xrayCount,
-      sono: sonoCount,
-      pathology: Math.max(0, allCount - ctCount - xrayCount - sonoCount),
-    };
-
-    // Aggregate all available months in DB with record counts and share totals
-    const monthsAgg = await BillingShareRecord.aggregate([
-      {
-        $group: {
-          _id: {
-            monthKey: { $ifNull: ['$billingMonthKey', 'unknown'] },
-            monthName: { $ifNull: ['$billingMonth', 'Unknown Month'] },
-          },
-          count: { $sum: 1 },
-          totalNet: { $sum: '$netAmt' },
-          totalVeda: { $sum: '$vedaShare' },
-          totalSodani: { $sum: '$sodaniShare' },
-        },
-      },
-      { $sort: { '_id.monthKey': -1 } },
-    ]);
-
-    const availableMonths = monthsAgg.map((m) => ({
-      monthKey: m._id.monthKey,
-      monthName: m._id.monthName,
-      count: m.count,
-      totalNet: Math.round(m.totalNet * 100) / 100,
-      totalVeda: Math.round(m.totalVeda * 100) / 100,
-      totalSodani: Math.round(m.totalSodani * 100) / 100,
-    }));
-
-    // Billing groups list for filtering
-    const billingGroups = await BillingShareRecord.distinct('billingGroup', modalityFilter);
-
-    return res.json({
-      records,
-      pagination: {
-        total,
-        page: pageNum,
-        limit: limitNum,
-        totalPages: Math.ceil(total / limitNum) || 1,
-      },
-      stats,
-      billingGroups: billingGroups.filter(Boolean),
-      availableMonths,
-      modalityCounts,
+    const result = store.findBillingRecords({
+      search: search as string,
+      billingGroup: billingGroup as string,
+      monthKey: monthKey as string,
+      isMatched: isMatched as string,
+      category: category as string,
+      page: parseInt(page as string, 10) || 1,
+      limit: parseInt(limit as string, 10) || 50,
+      sortBy: sortBy as string,
+      sortOrder: (sortOrder as 'asc' | 'desc') || 'asc',
     });
+
+    return res.json(result);
   } catch (error: any) {
     return res.status(500).json({ error: error.message || 'Error fetching billing records' });
   }
 };
 
-// Recalculate all billing records against current Master Rates
+// Recalculate all billing records against current Master Rates (In-Memory)
 export const recalculateAllBilling = async (_req: Request, res: Response) => {
   try {
-    const masterRates = await MasterRate.find({});
+    const masterRates = store.findAllMasterRates();
     const rateMap = new Map<string, { masterRate: number; vedaPct: number; sodaniPct: number }>();
     masterRates.forEach((mr) => {
       const vedaPct = Math.min(100, Math.max(0, Number(mr.vedaSharePercent) || 0));
@@ -544,11 +399,12 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
       });
     });
 
-    const allRecords = await BillingShareRecord.find({});
+    const allRecords = store.getAllBillingRecords();
     let matchedCount = 0;
     let unmatchedCount = 0;
+    const toRemoveIds: string[] = [];
 
-    const bulkOps = allRecords.map((rec) => {
+    allRecords.forEach((rec) => {
       const normService = normalizeText(rec.serviceName);
       const matched = rateMap.get(normService);
 
@@ -562,35 +418,18 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
         const sodaniShare = Math.round(((masterAmount * sodaniPct) / 100) * 100) / 100;
         const percent = `Veda: ${vedaPct}% | Sodani: ${sodaniPct}%`;
 
-        return {
-          updateOne: {
-            filter: { _id: rec._id },
-            update: {
-              $set: {
-                masterRate: matched.masterRate,
-                masterAmount,
-                vedaSharePercent: vedaPct,
-                sodaniSharePercent: sodaniPct,
-                percent,
-                vedaShare,
-                sodaniShare,
-                isMatched: true,
-              },
-            },
-          },
-        };
+        // Update in-place via store
+        store.updateBillingRecordsForService(rec.serviceName, matched.masterRate, vedaPct, sodaniPct);
       } else {
         unmatchedCount++;
-        return {
-          deleteOne: {
-            filter: { _id: rec._id },
-          },
-        };
+        toRemoveIds.push(rec._id);
       }
     });
 
-    if (bulkOps.length > 0) {
-      await BillingShareRecord.bulkWrite(bulkOps);
+    // Remove unmatched records from store
+    if (toRemoveIds.length > 0) {
+      const idSet = new Set(toRemoveIds);
+      store.billingRecords = store.billingRecords.filter(r => !idSet.has(r._id));
     }
 
     return res.json({
@@ -604,45 +443,18 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
   }
 };
 
-// Export records to Excel (.xlsx) with the 15 required fields & optional Month scoping
+// Export records to Excel (.xlsx) (In-Memory)
 export const exportBillingExcel = async (req: Request, res: Response) => {
   try {
     const { billingGroup, isMatched, search, category, monthKey } = req.query;
-    const query: any = {};
 
-    if (monthKey && typeof monthKey === 'string' && monthKey !== 'ALL') {
-      query.billingMonthKey = monthKey.trim();
-    }
-
-    if (search && typeof search === 'string') {
-      const trimmed = search.trim();
-      query.$or = [
-        { patientName: { $regex: trimmed, $options: 'i' } },
-        { billNo: { $regex: trimmed, $options: 'i' } },
-        { visitId: { $regex: trimmed, $options: 'i' } },
-        { serviceName: { $regex: trimmed, $options: 'i' } },
-      ];
-    }
-
-    if (billingGroup && typeof billingGroup === 'string' && billingGroup !== 'ALL') {
-      query.billingGroup = billingGroup.trim();
-    }
-
-    if (isMatched !== undefined && isMatched !== '') {
-      query.isMatched = isMatched === 'true';
-    }
-
-    if (category === 'CT') {
-      query.serviceName = { $regex: '(^|\\s|/)CT(\\s|/|$)', $options: 'i' };
-    } else if (category === 'XRAY') {
-      query.serviceName = { $regex: 'X-?RAY', $options: 'i' };
-    } else if (category === 'SONO') {
-      query.serviceName = { $regex: '(SONO|DOPPLER|MAMMO|USG|^CD\\s)', $options: 'i' };
-    } else if (category === 'PATHOLOGY') {
-      query.serviceName = { $not: { $regex: '((^|\\s|/)CT(\\s|/|$)|X-?RAY|SONO|DOPPLER|MAMMO|USG|^CD\\s)', $options: 'i' } };
-    }
-
-    const records = await BillingShareRecord.find(query).sort({ rowIndex: 1, _id: 1 });
+    const records = store.getBillingRecordsForExport({
+      search: search as string,
+      billingGroup: billingGroup as string,
+      monthKey: monthKey as string,
+      isMatched: isMatched as string,
+      category: category as string,
+    });
 
     const columnWidths = [
       { wch: 8 },  // SNo
@@ -662,7 +474,6 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
       { wch: 16 }, // Sodani Share
     ];
 
-    // Helper to format rows and append grand total row
     const buildSheetData = (recs: typeof records) => {
       let totalQty = 0;
       let totalGross = 0;
@@ -698,7 +509,6 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
         };
       });
 
-      // Append Total Row
       rows.push({
         'SNo': 'TOTAL',
         'Billing Group': '',
@@ -724,7 +534,6 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
     let filename = '';
 
     if (monthKey && monthKey !== 'ALL') {
-      // Single month export
       const monthName = records[0]?.billingMonth || String(monthKey || 'Month');
       const sheetName = monthName.replace(/[\/\\?*:[\]]/g, '').substring(0, 31);
       const sheetData = buildSheetData(records);
@@ -734,13 +543,11 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
 
       filename = `Billing_Share_${monthName.replace(/[\s/\\?%*:|"<>]/g, '_')}.xlsx`;
     } else {
-      // Multi-sheet workbook: All Combined + individual monthly sheets
       const allSheetData = buildSheetData(records);
       const allWorksheet = xlsx.utils.json_to_sheet(allSheetData);
       allWorksheet['!cols'] = columnWidths;
       xlsx.utils.book_append_sheet(workbook, allWorksheet, 'All Combined');
 
-      // Group records by billingMonth
       const monthGroups = new Map<string, typeof records>();
       records.forEach((r) => {
         const m = r.billingMonth || 'Other';
@@ -769,61 +576,42 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
   }
 };
 
-// Clear records for a specific month
+// Clear records for a specific month (In-Memory)
 export const deleteMonthRecords = async (req: Request, res: Response) => {
   try {
-    const { monthKey } = req.params;
+    const monthKey = req.params.monthKey as string;
     if (!monthKey) {
       return res.status(400).json({ error: 'Month key is required' });
     }
 
-    const result = await BillingShareRecord.deleteMany({ billingMonthKey: monthKey });
+    const deletedCount = store.deleteBillingByMonthKey(monthKey);
     return res.json({
       message: `Records for month ${monthKey} cleared successfully`,
-      deletedCount: result.deletedCount,
+      deletedCount,
     });
   } catch (error: any) {
     return res.status(500).json({ error: error.message || 'Error clearing month records' });
   }
 };
 
-// Clear all billing records
+// Clear all billing records (In-Memory)
 export const clearBillingRecords = async (_req: Request, res: Response) => {
   try {
-    const result = await BillingShareRecord.deleteMany({});
+    const deletedCount = store.clearAllBillingRecords();
     return res.json({
       message: 'All billing share records cleared successfully',
-      deletedCount: result.deletedCount,
+      deletedCount,
     });
   } catch (error: any) {
     return res.status(500).json({ error: error.message || 'Error clearing billing records' });
   }
 };
 
-// Get list of distinct unmatched services
+// Get list of distinct unmatched services (In-Memory)
 export const getUnmatchedServices = async (_req: Request, res: Response) => {
   try {
-    const unmatched = await BillingShareRecord.aggregate([
-      { $match: { isMatched: false } },
-      {
-        $group: {
-          _id: '$serviceName',
-          count: { $sum: 1 },
-          sampleRate: { $first: '$rate' },
-          sampleQty: { $sum: '$qty' },
-        },
-      },
-      { $sort: { count: -1 } },
-    ]);
-
-    return res.json(
-      unmatched.map((u) => ({
-        serviceName: u._id,
-        occurrenceCount: u.count,
-        sampleRate: u.sampleRate,
-        totalQty: u.sampleQty,
-      }))
-    );
+    const unmatched = store.getUnmatchedServices();
+    return res.json(unmatched);
   } catch (error: any) {
     return res.status(500).json({ error: error.message || 'Error fetching unmatched services' });
   }

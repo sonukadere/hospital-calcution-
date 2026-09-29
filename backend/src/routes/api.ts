@@ -23,7 +23,7 @@ import {
   getUnmatchedServices,
 } from '../controllers/shareBillingController';
 import { processShareManagementExcel } from '../controllers/shareManagementProcessController';
-import { MasterRate, BillingShareRecord } from '../models';
+import { store } from '../store/inMemoryStore';
 
 const router = Router();
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 50 * 1024 * 1024 } });
@@ -31,14 +31,12 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 50 
 // Health check
 router.get('/health', async (_req, res) => {
   try {
-    const [rateCount, recordCount] = await Promise.all([
-      MasterRate.countDocuments(),
-      BillingShareRecord.countDocuments(),
-    ]);
+    const rateCount = store.countMasterRates();
+    const recordCount = store.countBillingRecords();
     res.json({
       status: 'ok',
       service: 'Pathology Share Management API',
-      database: 'CONNECTED',
+      database: 'IN-MEMORY (No DB Required)',
       stats: {
         masterRates: rateCount,
         billingRecords: recordCount,

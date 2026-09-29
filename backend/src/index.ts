@@ -2,8 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import router from './routes/api';
-import { connectDB } from './config/db';
-import { MasterRate, BillingShareRecord } from './models';
+import { store } from './store/inMemoryStore';
 
 dotenv.config();
 
@@ -34,12 +33,12 @@ app.use('/api', router);
 // Health check
 app.get(['/', '/health', '/api/health'], async (_req, res) => {
   try {
-    const rateCount = await MasterRate.countDocuments();
-    const recordCount = await BillingShareRecord.countDocuments();
+    const rateCount = store.countMasterRates();
+    const recordCount = store.countBillingRecords();
 
     res.json({
       status: 'ok',
-      database: 'CONNECTED',
+      database: 'IN-MEMORY (No DB Required)',
       metrics: {
         masterRates: rateCount,
         billingRecords: recordCount,
@@ -49,25 +48,20 @@ app.get(['/', '/health', '/api/health'], async (_req, res) => {
   } catch (err: any) {
     res.status(500).json({
       status: 'error',
-      database: 'DISCONNECTED',
+      database: 'IN-MEMORY',
       error: err.message,
       timestamp: new Date(),
     });
   }
 });
 
-async function startServer() {
-  await connectDB();
-
-  const server = app.listen(PORT, async () => {
+function startServer() {
+  // No database connection needed — data is in-memory
+  const server = app.listen(PORT, () => {
     console.log(`🚀 Pure Share Management Backend running on http://localhost:${PORT}`);
-    try {
-      const rateCount = await MasterRate.countDocuments();
-      const recordCount = await BillingShareRecord.countDocuments();
-      console.log(`📊 Loaded: ${rateCount} Master Rates | ${recordCount} Billing Records`);
-    } catch (e: any) {
-      console.log(`⚠️ Status check error:`, e.message);
-    }
+    console.log(`📦 Mode: IN-MEMORY (No Database Required)`);
+    console.log(`📊 Loaded: ${store.countMasterRates()} Master Rates | ${store.countBillingRecords()} Billing Records`);
+    console.log(`💡 Data lives in server memory — Excel upload → process → export`);
   });
 
   server.on('error', (err: any) => {

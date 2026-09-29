@@ -1,0 +1,8456 @@
+[
+  {
+    "serviceName": "X-RAY HIP JOINT AP",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH SHOULDER AP/AXILLARY",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SACRUM/COCCYS LAT",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH ELBOW AP & LAT.",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH FOOT AP/LAT",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ORBIT AP & LAT",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ORBIT AP",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CEPHALOGRAM PA",
+    "rate": 700,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CEPHALOGRAM LATERAL",
+    "rate": 700,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CLAVICLE AP",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SCANOGRAM SPINE AP",
+    "rate": 1800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-Ray Both Hand AP",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ANKLE WITH FOOT AP/LAT/OBLI",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY URETHROGRAM (MCU)",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY FOOT AP/LAT/OBS",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-Ray Cervical Spine AP/Lat/Flex/Ext",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH KNEE AP(Standing)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH LEG AP,LATERAL & OBLIQUE",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-Ray Arm (Humerus) AP/Lat",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY DORSAL SPINE LAT.",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CHEST PA & LATERAL",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY HSG",
+    "rate": 4000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SOFT TISSUE NECK LATERAL",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY FOREARM AP & LAT",
+    "rate": 450,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY KNEE AP/LAT/OBS",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SKULL LAT.",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SCANOGRAM LOWER LIMB",
+    "rate": 1800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH ANKLE AP,LAT",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY DORSAL LUMBER SPINE AP & LAT.",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CERVICAL SPINE AP,LAT,OBLIQUE",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY UPPER ARM",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY PNS WATER VIEW",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BONE AGE",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY LEG AP/LAT/OBS",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY HAND AP & LAT",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CERVICAL SPINE AP/LAT",
+    "rate": 650,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY URETHROGRAM (RCU)",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY HEEL AP & LAT",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY MASTOID BOTH SIDE",
+    "rate": 700,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY JUG HANDLE VIEW",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ELBOW AP & LAT.",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH KNEE AP STANDING,LAT,SKYLINE",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ABDOMEN STANDING",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SCANOGRAM SPINE AP/LAT RIGHT BENDING",
+    "rate": 4000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM SWALLOW",
+    "rate": 1800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH HEEL LAT",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY FACE LATERAL OPEN MOUTH",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY PELVIS AP & LAT.",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY L.S.SPINE AP/LAT/OBL",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY THUMB AP/LAT/OBS",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM S/D + I/C REGION",
+    "rate": 3000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CERVICAL LAT",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CHEST AP & OBLIQUE",
+    "rate": 700,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY L.S. SPINE LATERAL",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CHEST P.A. VIEW",
+    "rate": 450,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SCANOGRAM SPINE AP/LAT",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY L.S. SPINE AP/LAT",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY L.S.SPINE AP FOR BIFICDA",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM MEAL FOLLOW THROUGH",
+    "rate": 3000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY FISTULOGRAM",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM ENEMA",
+    "rate": 3000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY THORACIC AP & LAT.",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY L.S. SPINE EXT.& FLEX.",
+    "rate": 700,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CHEST OBLIQUE VIEW",
+    "rate": 450,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY NASAL BONE LAT",
+    "rate": 450,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY STYLOID PROCESS AP",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SOFT TISSUE NECK AP & LATERAL",
+    "rate": 700,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH HEEL AXIAL & LAT",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY HIP JOINT",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY INFENTOGRAM",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY L.S. SPINE AP,LAT, EXT.& FLEX.",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY MANDIBLE AP/OBS",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY PELVIS AP",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM SWALLOW S/D",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY KUB",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SKULL AP/LAT",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SACRUM/COCCYS AP/LAT",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY TM JOINT (BOTH SIDE)",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-Ray Chest P.A.View (Child)",
+    "rate": 450,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY GASTROGRAFFIN STUDY",
+    "rate": 4000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-Ray Both Wrist AP",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ANKLE AP/LAT/OBS",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM S/D",
+    "rate": 1800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY FOOT WITH ANKLE AP/LAT.OBLI",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SINOGRAM",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY WRIST AP,LAT & OBLI",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY THIGH AP/LAT/OBS",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY COLANGIOGRAM",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BARIUM I/C",
+    "rate": 3000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY FINGER AP/LAT/OBS",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-Ray Both Shoulder AP",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SHOULDER AP/AXILLARY",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ASCENDING URETHROGRAM (RGU)",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY CERVICO DORSAL SPINE AP/LAT",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY BOTH HEEL (CALCANIUM) LAT.",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY IVP",
+    "rate": 4000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY ABDOMEN AP & LAT.",
+    "rate": 900,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY SHOULDER AP",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Liver Function Profile (Without PT)",
+    "rate": 1650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Treponema Pallidum Heamagglutination(TPHA) - In Dilution",
+    "rate": 1400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CMV DNA Viral load by PCR(Quantitative)",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NMO with MOG Antibody Profile-CSF",
+    "rate": 7060,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Thrombophilia Profile-Mini",
+    "rate": 9500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Metabolic Panel Comprehensive",
+    "rate": 1960,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Sjogrens Syndrome Profile",
+    "rate": 3100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 hrs urine Nor-Metanephrine HPLC",
+    "rate": 2460,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Vitamin B7 (Biotin)",
+    "rate": 3850,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Vitamin B5",
+    "rate": 3850,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "MPN Comprehensive Panel (Blood)",
+    "rate": 16000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Paraneoplastic syndrome/Neuronal Antibody Profile-3",
+    "rate": 15400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HISTOPATHOLOGY LARGE",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "HISTOPATHOLOGY MEDIUM",
+    "rate": 1500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "HISTOPATHOLOGY SMALL",
+    "rate": 1200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Leukemia panel by fish- (CLL Leukemic Blood)",
+    "rate": 14000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HLA-B35",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BRCA 1 and 2 profile",
+    "rate": 16500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PlGF/sFlt-1 Ratio",
+    "rate": 4000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "sFlt-1 (Soluble fms-like tyrosine kinase-1) Serum",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PlGF (Placental Growth Factor) Serum",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DCP- Decarboxy Prothrombin PIVKA II",
+    "rate": 3500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD13",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CMV DNA Detection by Real Time PCR - Urine",
+    "rate": 5300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Influenza PCR panel (H1N1, A, B, H3N2)",
+    "rate": 3200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Tacrolimus by ELCIA",
+    "rate": 4500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* CONJUNCTIVAL",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "HLADQ2/HLADQ8",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "New Born Screening - 5 Analytes",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Medicine Allergy",
+    "rate": 2500,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "LymeBorrelia Burgdorgeri IgM antibodies by EIA- Serum",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SMEAR FOR AFB URINE",
+    "rate": 250,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CLPD/ CLL Panel",
+    "rate": 11000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* EAR SWAB",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "IMMUNOGLOBIN-IgM*",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* BLOOD BACT/ALERT 2",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "EBV DNA Viral load by Real Time PCR - EDTA Blood",
+    "rate": 6700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "EBV VCA IgG Antibody",
+    "rate": 2130,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (BLOOD )",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (EAR SWAB)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* BLOOD BACT/ALERT 1",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Beta Thalassemia Gene Sequencing",
+    "rate": 9400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD UREA",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM URIC ACID",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (BLOOD ) Profile",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Allergen,Individual- Drug Cephalosporin antibiotic",
+    "rate": 1300,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Allergen, Individual-Drug Amoxicillin antibiotic",
+    "rate": 1300,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Allergy - Drug Panel: ( Maxi )",
+    "rate": 7000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Aneuploidy detection by QF-PCR (Product of Conception)",
+    "rate": 4500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HIRSUTISM PROFILE 3",
+    "rate": 8400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HSV 1&2 IgM Antibody by western blot",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HSV 1&2 IgG Antibody by western blot",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CNS QUESTIONNAIRE",
+    "rate": 50,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "BIO CHEMICAL TEST SBT-13",
+    "rate": 2860,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Immunoglobulin Profile (IgG,IgA,IgM)",
+    "rate": 3000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* BLOOD BACT/ALERT(Profile)",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Block processing (With transportation)",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Block processing (Without transportation)",
+    "rate": 100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Cystic Fibrosis Immuno Reactive Trypsinogen IRT (Neonatal screen)",
+    "rate": 500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Toxoplasma DNA Detection by PCR",
+    "rate": 3700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "RENAL PROFILE EXTENDED",
+    "rate": 2070,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Aspergillus aspergillosis (ABPA) Profile",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NIPT(Non Invasive prenatal screening Test)",
+    "rate": 13000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Aldosterone/Renin Ratio Aldosterone/PRA Ration",
+    "rate": 7300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LEAD LEVEL",
+    "rate": 2150,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "BONE MARROW STUDIES",
+    "rate": 1000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Hepatitis C Virus Genotyping",
+    "rate": 7300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "AMINO ACID SCREEN QUALITATIVE",
+    "rate": 2400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD19",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Lamotrigine Level",
+    "rate": 4300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TOTAL BILE ACIDS SERUM",
+    "rate": 2100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Genexpert TB Test (TB PCR)",
+    "rate": 2200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "O.T. Swab culture-5",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "LEPTOSPIRA ANTIBODY IgM & IgG",
+    "rate": 2000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "STOOL FOR STERCOBILINOGEN",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Neonatal Screen -III 8 markers",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Beta Thalassemia by PCR Common Mutations",
+    "rate": 6000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Reducing Substances Stool",
+    "rate": 200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "IBD Profile 1",
+    "rate": 6000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NEONATAL SCREEN-IV",
+    "rate": 5200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "RO(SSA-Soluble Substance A)Antibody,Serum",
+    "rate": 1300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Amino Acids Quantitative HPLC (Urine)",
+    "rate": 6200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Semen Analysis (Automation)",
+    "rate": 650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Culture and Indentification,Anaerobic Bacteria Stool for C.Difficile",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SMEAR FOR LEPRA BACILLI",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "URINE (CHYLE)",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PARTIAL THROMBOPLASTIN TIME ACTIVATED",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs URINARY SODIUM",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Animal Complete B. Count",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LEPTOSPIRA (IGG)",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HAEMOGLOBIN (URINE)",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Food Intolerance",
+    "rate": 4500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (THROAT SWAB)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Cannabis for spot Urine",
+    "rate": 500,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Methotrexate",
+    "rate": 3600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BETA 2 MICROGLOBULIN",
+    "rate": 1600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti NMO(Neuromyelitis Optica Antibody)",
+    "rate": 5000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Parietal Cell Antibody",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "U1-snRNP",
+    "rate": 2600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Allergen Individual Food Cow Milk",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Catecholamines Adrenaline and Nor-adrenaline Urine 24 Hours",
+    "rate": 4800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE FOR OPIEATS",
+    "rate": 440,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "AMINO ACID SCREEN QUANTITATIVE",
+    "rate": 7700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CREATININE SERUM GFR",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* Amniotic Fluid",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Dopamine",
+    "rate": 2600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Chromium Serum",
+    "rate": 3500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Helicobacter Pylori-IgA,IgG,IgM Antibody",
+    "rate": 1200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COVID-19 RNA BY RT-PCR (TRUENET)",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GLUCOSE INSULIN RATIO",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "T(9;22) by Real Time PCR Bcr-Abl International Scale Blood",
+    "rate": 7200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "KETONE BODIES/ACETONE",
+    "rate": 70,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Auto Immune Encephalitis Panel",
+    "rate": 22500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "C.P.K.",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "OT & Air Sample Culture Panel",
+    "rate": 1300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "IMMUNOGLOBULIN-IgG, SERUM",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CPK MM fraction",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Alpha-1 Antitrypsin",
+    "rate": 2400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Acetylcholinesterase",
+    "rate": 1750,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Tacrolimus,Blood",
+    "rate": 4500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Du Test",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CLOTTING TIME (Capillary Method)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY...PUS",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "25 HYDROXY VITAMIN D",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Metanephrine Free,Plasma",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Toxoplasma Avidity Test",
+    "rate": 1400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NEONETAL BLOOD SCREENING",
+    "rate": 1600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GBM ANTIBODY",
+    "rate": 1950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti SSA",
+    "rate": 1550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI HEV",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BCR ABL PCR International Scale Blood",
+    "rate": 7200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "COVID-19 QUALITATIVE REAL TIME PCR",
+    "rate": 700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "IGF BP3",
+    "rate": 3800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TB MUCIN CLOT TEST",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GROWTH HORMONE (ORAL GLUCOSE SUPPRESSION TEST)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GAD-65 Antibody for Paraneoplastic Syndrome",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "EBV IgM Antibody to Viral",
+    "rate": 2130,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD3, CD4, CD8",
+    "rate": 2100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Glucagon Stimulation Test",
+    "rate": 3700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Air Sample Culture",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "MTHFR Mutations C677T/A1298C Mutations",
+    "rate": 5900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SALMONELLA TYPHI IgG & IgM",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ARYL Sulphatase-A (Sandor)",
+    "rate": 3750,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "URINE FOR CANNABIS",
+    "rate": 440,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "pH",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti Jo Antibody",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Heptoglobin",
+    "rate": 2000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "P.R.P SAMPLE PREPRATION",
+    "rate": 800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Free Beta HCG",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "O.T. Swab culture-4",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "URINE DRUG OF ABUSE TEST PANEL (10 DRUG)",
+    "rate": 4000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Syphilis Antibodies",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Leukemia Basic Panel by Blood",
+    "rate": 9500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SPECIFIC GRAVITY",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Clinical Exome Sequencing",
+    "rate": 23000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ADH (Anti diuretic hormone)Vasopressin plasma",
+    "rate": 5400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Serotonin",
+    "rate": 4700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Hepatitis C Virus RNA Detection",
+    "rate": 3900,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "HIV 1&2 RNA VIRAL LOAD(PCR)SUPRATECH",
+    "rate": 7000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HLAB-5/HLAB-51",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Paul bunnel test",
+    "rate": 1000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI HAV AB.-TOTAL",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Candida Albicans Antibodies",
+    "rate": 3700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Lymphocyte Subset Panel Basic",
+    "rate": 7300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Myasthenia Gravis Profile",
+    "rate": 11400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HIV-1 Viral Load",
+    "rate": 5800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "DIALYSIS FLUID",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti SSB",
+    "rate": 1550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Levetiracetam",
+    "rate": 5000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CHLAMYDIA ANTIGEN",
+    "rate": 1950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Nor-Metanephrine Free,Plasma",
+    "rate": 4000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Air Sampling Culture",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CD - 34 (BLOOD)",
+    "rate": 2200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Urine for Alkaptonuria",
+    "rate": 950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Opiates for Spot Urine",
+    "rate": 500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Galactose (Total) Screenin Qualitative",
+    "rate": 900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "AGP (ANION GAP)",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Chlamydia Trachimatis-IgM Antibodies",
+    "rate": 950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLADDER TUMOR ANTIGEN",
+    "rate": 3000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Fructosamine",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "WIDAL TUBE TEST",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CD20",
+    "rate": 2200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CHLAMYDIA PNEUMONIAE IGG ANTIBODY",
+    "rate": 2250,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs Urinary Protein Creatinine Ratio.",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE FOR SCHISTOSOMIASIS",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HIV-1 Viral load Taqman",
+    "rate": 5800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti - Ro/SSA",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DRUG SESITIVITY FOR AFB CULTURE",
+    "rate": 8500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Beta-2 Transferrin (Nasal Fluid & Serum)",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HIRSUTISM PROFILE 1",
+    "rate": 4100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CSF Rhinorrhoea",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Hams Test For PNH",
+    "rate": 1200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Febrile Profile",
+    "rate": 1300,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "BRCA 1 and 2 Profile Complete Gene Sequencing",
+    "rate": 30000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Free Androgen Index FAI",
+    "rate": 3200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FTA-Abs IgM antibodies to Treponem",
+    "rate": 1700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Musk Antibody Muscle Specific Kinase AB",
+    "rate": 6200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Urine Myoglobin",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BCR - ABL (Philadelphia Chromosome)",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PNH Profile",
+    "rate": 7100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "IMMUNOFIXATION SERUM",
+    "rate": 7900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Nicotine Serum",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Malaria Antibody Test",
+    "rate": 800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Centromere Antibody",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TZANCK SMEAR",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "B.HCG Qualitative (Card)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Body Fluid Routine",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti-La/SSB",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PH VALUE",
+    "rate": 70,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CYSTIC FLBROSIS 5 MUTATIONS",
+    "rate": 7500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Aldolase Enzymatic",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GROWTH HORMONE STIMULATION TEST",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Cadmium Blood new",
+    "rate": 3600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "KARYOTYPING (SANDOR)",
+    "rate": 2500,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Catecholamines Adrenaline and Nor-adrenaline Plasma",
+    "rate": 5800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Autoimmune Liver Profile/ ASMA",
+    "rate": 6200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Tetanus Toxoid IgG",
+    "rate": 4700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Autoimmune Antibody-Liver(Choithram)",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "AFB MTb Antibiogram panel 2nd Line",
+    "rate": 5300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Holo Transcobalamin (Active Vitamin B12)",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ZINC SERUM",
+    "rate": 1700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Prostatic (Massage) Smear",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Cyfra (Ca) 21-1",
+    "rate": 3100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "INHIBIN (A) SERUM (TUMOUR MARKER)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Adiponetin",
+    "rate": 2500,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Myositis Profile 16 Antigens",
+    "rate": 10500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY 17 KETOSTEROID",
+    "rate": 4200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "C1 Esterase Inhibitor",
+    "rate": 3500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Cryptosporidium Parvum Antigen Detection by Immunochromatography",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Block & Slides Review",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Selenium Blood",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Urinary Proteins Electophoresis",
+    "rate": 950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Ornithine Quantitative Plasma",
+    "rate": 6300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD VBG",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti Heparin PF4 Antibody (HIT Heparin Induced Thrombocytopenia)",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "O.T. Swab culture-6",
+    "rate": 900,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Graph Only",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PLA2 Receptor Antybody",
+    "rate": 5600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Histamine",
+    "rate": 6800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD 200 COUNT",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD - 117",
+    "rate": 1550,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Bordetella Pertussis IgG Antibodies",
+    "rate": 2800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Clostridium Difficile GDH Stool",
+    "rate": 2400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CSF Microprotein",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Amphetamine for Spot Urine",
+    "rate": 500,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "24 Hrs. URINARY URIC ACID CLEARANCE",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CMA (Chromosomal Micro Array)(Sendor)",
+    "rate": 20000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "SAAG(serum-ascites albumin gradient)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Diptheria IgG Antibodies",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Haptoglobin",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Cyclosporin A By CMIA",
+    "rate": 3200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SCA (1,2,3,6,7,10&12 TYPES)",
+    "rate": 14500,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Anti MOG Antibodies",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GLUCOSE TOLERANCE TEST (2 samples)",
+    "rate": 140,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Hep A Vaccine",
+    "rate": 1250,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Amyloid A",
+    "rate": 4300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Nor-Adrenaline (Nor-Epinephrine)",
+    "rate": 3600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Methyl Malonic Acid (Quantitative)",
+    "rate": 9000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE ORGANIC ACID",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Cholinesterase",
+    "rate": 1000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Neuronal Antibody Profile",
+    "rate": 9000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Gamma Glutamytransferase(GGT)",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MIXING STUDIES (PT/APTT)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Plasma Renin Activity (PRA)",
+    "rate": 5170,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GLUTAMIC ACID",
+    "rate": 7500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "E Histolytica Antigen Detection",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "COLLAGEN PROFILE",
+    "rate": 8000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "STFR-Soluble Transferrin Receptor",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Hand Hygiene Test",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "FILARIA ANTIBODY",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CYSTICERCUS (Taenia solium)",
+    "rate": 1700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Endomysial Antibody,Serum",
+    "rate": 2100,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "ASCA-IgA Saccharomyces Cerevisiae",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Beta 2 Microglobulin (Urine)",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "O.T. Swab culture-2",
+    "rate": 300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Lactose Tolerance (5 Samples)",
+    "rate": 670,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Spinal Muscular Atrophy(SMA) SMN1 Gene deletion Blood",
+    "rate": 6400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FACTOR V",
+    "rate": 3200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "MERCURY BLOOD",
+    "rate": 3000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Huntington Disease Mutation Analysis-Blood",
+    "rate": 5100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Chlamydia Trachimatis-IgG Antibodies",
+    "rate": 1140,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Rota Virus Antigen Detection",
+    "rate": 1400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Benzodiazapine",
+    "rate": 480,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "HIV I COMBO",
+    "rate": 6000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti RO SSA Antibody by ELISA Method",
+    "rate": 1550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SPERM DNA FRAGMENTATION (SCD)",
+    "rate": 3800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BCR - ABL Philadelphia by Fish (Blood)",
+    "rate": 4700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD ABG",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti DNAse B",
+    "rate": 2400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Scrub Typhus Profile",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Nickel Serum",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Sperm Antibody-Total ASAB",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ER,PR,Her-2(c-erb-B2) Ki 67",
+    "rate": 6200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "F.F.P (P.R.F) SAMPLE PREPRATION",
+    "rate": 300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD SUGAR 1 HOUR POST DINNER",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VITAMIN B3",
+    "rate": 3600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CEA",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. Urinary Cortisol (Free)",
+    "rate": 900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Leukemia Diagnostic Panel CLL/HCL/SLL Basic",
+    "rate": 9500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ALBUMIN (FLUID)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti NMDA antibodies",
+    "rate": 7000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GIARDIA ANTIGEN STOOL",
+    "rate": 1200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ISLET CELL Antibody",
+    "rate": 2200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FLUID CREATININE",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VGKC",
+    "rate": 9500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HIV 2 RNA",
+    "rate": 3100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Coeliac Disease Profile-1 Basic",
+    "rate": 2700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Flowcytometic immunophenotping Report",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ARSENIC,BLOOD",
+    "rate": 3200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Mitochondrial Myopathy Mutation Detection-Blood",
+    "rate": 7000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HLA-CLASS II antigen DQ LOCUS",
+    "rate": 7200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Kappa And Lambda- Free(Free Lite)",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Thrombin Time (TT)",
+    "rate": 1000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FNAC (With Sono Guided)",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anti HAV IgG",
+    "rate": 1200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Androgen Profile",
+    "rate": 5000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "INHIBIN (A) SERUM (TUMAR MARKER)",
+    "rate": 1000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Mercury Urine",
+    "rate": 3600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anaerobic OT culture-10",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-9",
+    "rate": 1800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-8",
+    "rate": 1600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-7",
+    "rate": 1400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-6",
+    "rate": 1200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-5",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-4",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-3",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-2",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic OT culture-1",
+    "rate": 200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Osteocalcin BGP-Bone Gla Protein Serum",
+    "rate": 3700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "P1NP Intact N-Terminal Propeptide of Type I Procollagen Serum",
+    "rate": 1950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Alkaline Phosphatase with Bone Fraction Ostase Serum",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE DRUG OF ABUSE TEST CANNABINOIDS (Marijuana)",
+    "rate": 2000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "HLA Typing-Molecular DQ locus Class II",
+    "rate": 6785,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Measles(Rubeola) - IgM",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Dopamine 24 hrs urine",
+    "rate": 3500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Nor-Adrenaline (Nor-Epinephrine) Urine 24 Hrs",
+    "rate": 3850,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Adrenaline (Epinephrine] Urine24hrs",
+    "rate": 3300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE DRUG OF ABUSE TEST PANEL (9 DRUG)",
+    "rate": 4000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Y Chromosome Microdeletion RT PCR",
+    "rate": 4000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Beta hydroxy butyrate Acid",
+    "rate": 1700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Steam Biological Indicator",
+    "rate": 150,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ETO Biological Indicator",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Anaerobic Culture",
+    "rate": 1500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "STERILITY TEST",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "tTG Antibody-IgG",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "THYROID PROFILE(T3T4TSH)",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ARTHRITIS PROFILE (EXTENDED)",
+    "rate": 2240,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM MAGNESIUM",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HIV-Early Detection Profile-1",
+    "rate": 5040,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GROWTH HORMONE (ORAL GLUCOSE SUPPRESSION TEST) 3 Samples",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Cryptosporidium by smear examination (Stool)",
+    "rate": 600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "THROAT SWAB-ALBERT~S STAIN(KLB)",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "PCOD PROFILE 1",
+    "rate": 5700,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Testosterone TOTAL/SERUM TESTOSTERONE",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PCOD PROFILE",
+    "rate": 3000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Celiac Disease Profile",
+    "rate": 5000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANAEROBIC SWAB",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "EXTENDED CBC (COMPLETE BLOOD COUNT)",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "OXCARBAZEPINE SERUM",
+    "rate": 5000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "QUAD TEST (15 to 22 weeks) Profile",
+    "rate": 2700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DOUBLE MARKER (9 to 13.6 weeks) Profile",
+    "rate": 2000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BOH Profile",
+    "rate": 9620,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "NMO with MOG Antibody Profile",
+    "rate": 6900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "STD Profile",
+    "rate": 2600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COAGULATION PROFILE",
+    "rate": 1030,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Tropical Fever Panel Blood Test byTropical Fever Panel Blood Test by PCR Method",
+    "rate": 4000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Electrolytes (Extended)",
+    "rate": 1220,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TESTOSTERONE POOLED SAMPLE",
+    "rate": 650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BK Virus Quantitative Blood",
+    "rate": 7100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HLA-B52",
+    "rate": 6500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LH,FSH,PROLACTIN",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "APLA Profile",
+    "rate": 6320,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* FLUID",
+    "rate": 900,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Clinical Exome",
+    "rate": 25000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "MELAS mutation Detection",
+    "rate": 6000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "APT",
+    "rate": 200,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "FERTILITY PROFILE (MALE)",
+    "rate": 2900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Echinococcus (Hydatid Cyst) IgG Antibody",
+    "rate": 1800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANA By IFA(Reflect to ENA Profile)",
+    "rate": 4400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "JAK-2 Mutation(CMPD) V617F",
+    "rate": 6800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANAEMIA PROFILE EXTENDED",
+    "rate": 3510,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Pap Smear (LBC) and HPV DNA PCR",
+    "rate": 3350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ICU Profile",
+    "rate": 1870,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MYOGLOBIN - URINE",
+    "rate": 1200,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "SERUM TRIGLYCERIDES",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ARTHRITIS PROFILE",
+    "rate": 1430,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANAEMIA PROFILE",
+    "rate": 2450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TORCH IgG & IgM",
+    "rate": 3700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TORCH IgM",
+    "rate": 1850,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TORCH IgG",
+    "rate": 1850,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COVID PROFILE BLOOD 1(without IL6)",
+    "rate": 2600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COVID PROFILE BLOOD 2(with IL6)",
+    "rate": 4200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Vitamin D3((25(OH)D2 & 25(OH)D3)D",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DIABETIC PROFILE(EXTENDED)",
+    "rate": 2010,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DIABETIC PROFILE",
+    "rate": 1210,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Immature Platelet Fraction",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ELECTROPHORESIS HAEMOGLOBIN (HB)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLEEDING TIME (DUKE-S METHOD)",
+    "rate": 30,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "T3 (TRI IODOTHYRONINE) TOTAL",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TSH*",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VITAMIN D",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FREE T3(TRIIODOTHYRONINE)",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIPID PROFILE",
+    "rate": 650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "THYROID PROFILE(FT3,FT4,TSH)",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PRE OPERATIVE PROFILE",
+    "rate": 1060,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "FEVER PROFILE",
+    "rate": 610,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTENATAL PROFILE",
+    "rate": 1080,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RENAL PROFILE",
+    "rate": 690,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIVER FUNCTION PROFILE",
+    "rate": 1930,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* AURAL SWAB",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE (FUNGAL)",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "O.T. Swab culture -7",
+    "rate": 1050,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* AQUEOUS FLUID",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* DRAIN TIP",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* (NASAL SWAB)",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (RECTAL SWAB)MENUAL",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (STOOL)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (DRAIN FLUID)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (VAGINAL SWAB)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* SPUTUM",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* SEMEN",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "O.T. Swab culture -3",
+    "rate": 450,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* PUS",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "O.T. Swab culture",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE AND SENSITIVITY (PUS)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* CUNJUNCTIVAL",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE AND SENSITIVITY (FLUID)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* BLOOD BACT/ALERT",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (CONJUCTIVAL SWAB)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE AND SENSITIVITY (BLOOD )",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (SPUTUM)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (AURAL SWAB)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (SEMEN)",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (AFB CULTURE)",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)*",
+    "rate": 1100,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* VITEROUS FLUID",
+    "rate": 1000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* VAGINAL",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "O.T. Swab culture -10",
+    "rate": 1500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* URINE",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "O.T. Swab culture-9",
+    "rate": 1350,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* THROAT SWAB",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "O.T. Swab culture-8",
+    "rate": 1200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CULTURE & SENSITIVITY (A)* STOOL",
+    "rate": 800,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Aspergillosis IgG antibodies",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Hepatitis C Virus RNA(Quantitative)",
+    "rate": 4000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SERUM LEAD LEVEL",
+    "rate": 2150,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FACTOR X",
+    "rate": 4700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE (MICROALBUMINURIA)",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI TPO",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. URINARY ZINC",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "APOLIPOPROTIEN A(APO A1)/ APO B",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PSA FREE (PROSTATIC SPECIFIC AG-FREE)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PROCALCITONIN (PCT)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Galactose Classical",
+    "rate": 2400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "UGT1A1 Gene Polymorphism",
+    "rate": 6420,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CERULOPLASMIN",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FILARIA SMEAR",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI ENDOMYCEAL ANTIBODY",
+    "rate": 1800,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Helicobacter Pylori Antigen (Stool)",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE METABOLIC PROFILE",
+    "rate": 7000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LIPOPROTEIN (A)",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Mumps(IgM)",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PROLACTIN POOLED SAMPLE",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM OSMOLARITY-OSMOLALITY",
+    "rate": 1050,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Allergen Individual IgE Specific",
+    "rate": 1400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PYRUVATE LEVELS",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LH LEUTEINIZING HORMONE",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI SMITH ANTIBODY",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALPHA FETO PROTEINS",
+    "rate": 650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "S.(AMH) ANTI MULLERIAN HORMONE",
+    "rate": 2000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SCA1 SPINOCEREBELLAR ATAXIA TYPE 1 REPEATS",
+    "rate": 3260,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD3/CD4 COUNTS ABSOLUTE",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Gastrin Serum",
+    "rate": 1570,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTISPERM ANTIBODIES",
+    "rate": 1100,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "17-KETOSTEROIDS URINE 24HRS.",
+    "rate": 2600,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "ANCA-C",
+    "rate": 1850,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CMV Cytomegalo Virus Avidity",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HOMOCYSTEINE (QUANTITATIVE)",
+    "rate": 1200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Measles(Rubeola) - IgG",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY DRUG TEST",
+    "rate": 9100,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "CPK ISOENZYME ELECTRPOHORESIS",
+    "rate": 8990,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URETHERAL SMEAR FOR GONOCOCCUS",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "BRUCELLA (IgG)",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "AMMONIA",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "T 4 (Thyroxin) Total",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY FOODPANEL(VEG.NONVEG)",
+    "rate": 3500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(PERICARDIAL)ROUTEIN",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TB QUANTIFERON (TB GOLD)",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "KAPPA LIGHT CHAIN BY FLOCYTROMETRY",
+    "rate": 2890,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Vw-Von Willebrand Antigen Citrated Plasma",
+    "rate": 9090,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "C-3 (COMPLIMENT)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FERRITIN LEVEL SERUM",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PHOSPHORUS",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FILARIA ANTIGEN",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CD4 / CD8",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "APA ANTI PHOSPHOLIPID IgG",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CA-125",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PHENYLALANINE URINE",
+    "rate": 6630,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "C-PEPTIDE",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "INTACT PTH",
+    "rate": 1290,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ACETONE (SERUM)",
+    "rate": 700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI THYROGLOBULIN ANTIBODIES",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LUPUS ANTICOAGULANT STUDY",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COOMBS TEST (DIRECT) GEL METHOD",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI HISTONES ANTIBODY",
+    "rate": 2700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ACE - ANGIOTENSIN CONVERTING ENZYME",
+    "rate": 1050,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Tacrolimus by LCMS",
+    "rate": 4400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VITAMIN K LEVELS",
+    "rate": 2400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Allergen Individual-Drug Sulpha antibiotic",
+    "rate": 1400,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "HIV VIRUS P24 ANTIGEN QUALITATIVE",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "OESTROGEN",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RENIN",
+    "rate": 3800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY UREA",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DMD PCR",
+    "rate": 7000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ALUMINIUM URINE",
+    "rate": 2600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HE4 (EOC MARKER)",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ALFA - 1 ANTITRYPSIN",
+    "rate": 1850,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "DHEA SO4 (DEHYDROEPIANDROSTERONE SULPHATE)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HIV-WESTERN BLOT",
+    "rate": 2700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SCL-70 Antibody",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "OSMOTIC FRAGILITY",
+    "rate": 750,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ER,PR,Her-2(c-erb-B2)",
+    "rate": 4000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "GRAM STAIN",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "PLATELET COUNT",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ACTH STIMULATION TEST FOR ANDROSTENDIONE",
+    "rate": 5000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TIBC (TOTAL IRON BINDING CAPACITY)",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LEPTIN SERUM",
+    "rate": 4490,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LEAD BLOOD",
+    "rate": 1750,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "GROWTH HORMONE",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TRANSFERRIN",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "COVID-19 RNA BY RT-PCR",
+    "rate": 1200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTIBODY-HBe",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY RESPIRATORY PANEL",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE GLUCOSE FASTING",
+    "rate": 30,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TROAT SWAB FOR GRAM~S STAIN",
+    "rate": 150,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "IGF - 1",
+    "rate": 2800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HIV Combo (P24 Antigen+ Antibodies) 4 Gen.",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI DELTA",
+    "rate": 900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANCA-C (PR3) By ELISA",
+    "rate": 1200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI THROMBIN III",
+    "rate": 4350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Calprotectin Fecal",
+    "rate": 3100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VITAMIN B6",
+    "rate": 3000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY FOOD PANEL(VEG.)",
+    "rate": 3500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Chikungunya PCR",
+    "rate": 1800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "THYROGLOBULIN",
+    "rate": 1550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FREE TESTOSTERONE",
+    "rate": 1450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MP by Fluorescent",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PSA",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "THROAT SWAB FOR GRAMS STAIN",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "VARICELLA VIRUS IgG ANTIBODY",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CMV CYTOMEGALO VIRUS IgM",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY COMPREHENSIVE PANEL",
+    "rate": 6000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOTAL COUNT & DIFF.COUNT",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RABIES ANTIBODY",
+    "rate": 3700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PROTEIN - C",
+    "rate": 4650,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Coxsackie IgM antibody by EIA, Serum",
+    "rate": 2800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Cold agglutinin",
+    "rate": 600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HIGH SENSITIVE C-REACTIVE PROTEIN",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 hrs URINE METANEPHRINES",
+    "rate": 3500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HERPES (HSV) IgM",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Coxsackie IgG antibody by EIA, Serum",
+    "rate": 2800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PARVOVIRUS B19 DNA by PCR",
+    "rate": 3300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SPUTUM FOR AFB(Fluoroscent)",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "IMMUNOGLOBULIN IgE SERUM",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. URINARY URIC ACID",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RH ANTIBODY TITRE (GEL METHOD)",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOXOPLASMA IgG",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HBcAg",
+    "rate": 800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FAT GLOBULES URINE",
+    "rate": 70,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FIBRINOGEN PLASMA",
+    "rate": 1000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VITAMIN B2",
+    "rate": 3000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Bile Acids-Total",
+    "rate": 1950,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "FAT GLOBULES-STOOL",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "S.PHENYTOIN (DILANTIN)",
+    "rate": 950,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IMMUNOGLOBIN - IgA",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CORTISOL (MORNING)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "INSULIN POST PRANDIAL",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RUBELLA ANTIBODY IgG",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DIGOXIN LEVELS",
+    "rate": 1060,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "INSULIN RANDOM",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "INTRINSIC FACTOR ANTIBODY",
+    "rate": 2690,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VARICELLA VIRUS IgM ANTIBODY (HERPES ZOSTER)",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SMEAR FOR CRYPTOCOCCUS",
+    "rate": 300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "LDH (FLUID)",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALUMINIUM SERUM",
+    "rate": 2600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Weil Felix test",
+    "rate": 850,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ACTH STIMULATION TEST FOR DHEA SULPHATE",
+    "rate": 3080,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NMO(Aquaporin 4)",
+    "rate": 5000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "COPPER,SERUM",
+    "rate": 2200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Endomysial Antibody IgA Antibody",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HIV Proviral DNA,DNA",
+    "rate": 4200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "tTG(Tissue transglutasminase-IgA)",
+    "rate": 1200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM TESTOSTERONE",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs URINARY CATECHOLAMINE",
+    "rate": 4800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "MEASLES IgG (Rubeola IgG) CSF",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PHOSPHORUS URINE",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IgVH Gene Mutation",
+    "rate": 9300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NT-PRO BNP Serum",
+    "rate": 2300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FREE LIGHT CHAIN ASSAY",
+    "rate": 5100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "EBV VCA IgM antibody by CLIA, Serum",
+    "rate": 1880,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SEX HORMONE BINDING GLOBULIN",
+    "rate": 2600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Tacrolimus by CMIA",
+    "rate": 4000,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "VALPROIC LEVEL",
+    "rate": 980,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "E2 ESTRADIOL",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LEPTOSPIRA IgM",
+    "rate": 1250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM PROTEIN ELECTROPHORESIS",
+    "rate": 900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "WBC DIFFERENTIAL COUNT",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "STONE ANALYSIS",
+    "rate": 1200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "IL-6 (Interleukin)",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LKM",
+    "rate": 1850,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "H1N1 RNA By RT PCR",
+    "rate": 3000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PNEUMOCYSTIS CARINII DETECTION",
+    "rate": 3300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HEPATITIS B VIRAL MARKER",
+    "rate": 4800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ASCORBIC ACID SERUM(Vitamin C)",
+    "rate": 3000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Serum Ketone",
+    "rate": 700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "EBV IgG Antibody to EA",
+    "rate": 2130,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FACTOR IX",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CRYOGLOBULIN",
+    "rate": 1230,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "NF-Kappa-B",
+    "rate": 3800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Z-N STAIN (AFB)",
+    "rate": 200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Spot Urine Albumin(Micro)/Creatinine Ratio",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti HBc IgM",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CH 50 Complement",
+    "rate": 5260,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "APA ANTI PHOSPHOLIPID AB.IgA",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FSH",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "OLIGOCLONAL BAND (CSF)",
+    "rate": 5150,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FIBRIN DEGRADATION PRODUCT (FDP)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ENA/ANA PROFILE",
+    "rate": 3500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HERPES SIMPLEX VIRUS DNA DETECTOR(PCR)",
+    "rate": 4700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI - ds DNA ANTIBODY (Serum)",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HYDATID SEROLOGY",
+    "rate": 1800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "KARYOTYPING (Chromosomal Analysis)Blood",
+    "rate": 3200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BRUCELLA (IgM)",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY CREATININE CLEARANCE",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI HAV ANTIBODIES-IgM",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLEEDING TIME(Duke~s Method)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti - Ro/SSA and Anti-La/SSB",
+    "rate": 2600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BICARBONATE(HCO3)",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CARBAMEZAPINE LEVELS",
+    "rate": 1000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ALLERGY PEDIATRIC PANEL",
+    "rate": 5000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VITAMIN A ESTIMATION",
+    "rate": 4400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BIOTINIDASE QUANTITATIVE",
+    "rate": 5500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANCA-P",
+    "rate": 1850,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD COLLECTION CHARGES",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24-Hrs. URINE-(COPPER)",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Mumps(IgG)",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ACTH (ADRENOCORTICOTROPIC HOR)",
+    "rate": 1750,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ACTH STIMULATION TEST FOR 17-OH PROGESTERONE",
+    "rate": 4000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI SPERM ANTIBODIES(ELISA)",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FRAGILE X CHROMOSOMAL ANALYSIS",
+    "rate": 6000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "C-4 (COMPLEMENT)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Allergen Individual-Drug Paracetamol AntiPyretic",
+    "rate": 1400,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Desmoglein III Antibody",
+    "rate": 3000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "INHIBIN (A) SERUM ( PRENATAL)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. Urinary Creatinine",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CARCINO EMBRYONIC ANTIGEN(CEA)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ESTRIOL FREE (UNCONJUGATED)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FOLLICLE STIMULATING HORMONE",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PROLACTIN",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IMMUNOHISTOCHEMISTRY",
+    "rate": 7500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Desmoglein I Antibody",
+    "rate": 3000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CA-19.9 (PANCREAS)",
+    "rate": 1250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VITAMIN B9",
+    "rate": 2200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Total Cholesterol",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FACTOR VIII",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti HEV IgM",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Autoimmune Liver Profile (9 Antigen)",
+    "rate": 4400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COOMBS TEST (INDIRECT) GEL METHOD",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VITAMIN B1",
+    "rate": 3300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CHOLESTROL (FLUID)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Aspergillosis IgM antibodies",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Methhaemoglobin blood",
+    "rate": 950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SCA2 SPINOCEREBELLAR ATAXIA TYPE 2 REPEATS",
+    "rate": 3260,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PARATHYROID HORMONE(Intact)",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI LIVER & KIDNEY ANTOBODY",
+    "rate": 1750,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Ganglioside IgM Antibody Panel",
+    "rate": 4060,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "COVID - 19 Antigen Test",
+    "rate": 900,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "INSULIN (FASTING)",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PHENYLKETONURIA URINE",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "RBC RED BLOOD CELLS",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "INHIBIN (B)",
+    "rate": 2240,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Kleihauer Betke Test",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Factor V Leiden",
+    "rate": 5800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CORTISOL (RANDOM)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "5-HIAA (Hydroxy Indole Acetic Acid)",
+    "rate": 3480,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TREPONEMA PALLIDUM HEAMAGGLUDINATION (TPHA)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINARY VMA (24 Hrs)",
+    "rate": 3970,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti HEV IGG",
+    "rate": 1400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CHIKUNGUNYA TEST- IgG",
+    "rate": 1500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FOLIC ACID",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PSEUDO CHOLINESTERASE SERUM",
+    "rate": 1150,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VARICELLA ZOSTER PCR (HERPES ZOSTER PCR)",
+    "rate": 3690,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "IRON LEVEL",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ACA - ANTI CARDIOLIPIN Ab-IgM",
+    "rate": 660,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Allergen Individual-Drug Mono Sodium Glutamate",
+    "rate": 1400,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "HERPES (HSV) IgG",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. URINARY COPPER",
+    "rate": 1900,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "CMV - (PCR)",
+    "rate": 3900,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "TOTAL & DIFFERENTIAL COUNT (BODY FLUIDS)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "S.TRANSFERRIN",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Lyme Borrelia Burgdorferi IgM",
+    "rate": 1700,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "RHEUMATOID FACTOR (ELISA)",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. URINARY CALCIUM",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CMV CYTOMEGALO VIRUS IgG",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI HEPATITIS B CORE TOTAL",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "INSULIN ANTIBODIES",
+    "rate": 2700,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti HCV",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HEPATITIS VIRAL MARKER",
+    "rate": 4450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HPV DNA PCR",
+    "rate": 2350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "KARYOTYPING (Chromosomal Analysis)POC",
+    "rate": 10000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "AFB-MTB Antibiogram Panel",
+    "rate": 7600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI HBc TOTAL ANTIBODY",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOXOPLASMA IgM",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "G6PD Quantitative",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BETA 2 - Glycoprotein I -IgM",
+    "rate": 1050,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HIV 1&2 DNA DETECTOR (QUALITATIVE) PCR",
+    "rate": 4060,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Ganglioside IgG Antibody Panel",
+    "rate": 3300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VAGINAL SMEAR (WET SMEAR)",
+    "rate": 200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "ALDOSTERONE SERUM",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CYSTATIN-C",
+    "rate": 1250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANTI CCP ANTIBODY",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CD4 COUNTS - ABSOLUTE",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "DIHYDROTESTOSTERONE(DHT)",
+    "rate": 2950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LEISHMANIA ANTIBODY IgG",
+    "rate": 1990,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI - ds DNA ANTIBODY BY ELISA METHOD",
+    "rate": 1600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DHEA DEHYDROEPIANDROSTERONE",
+    "rate": 3080,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY OXALIC ACID",
+    "rate": 1950,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ER,PR",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Meningitis Viral Panel IgM",
+    "rate": 5190,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Scrub typhus IgM",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM PROGESTERONE",
+    "rate": 650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "COVID-19 IgG Neutrilizing Antibodies Test",
+    "rate": 1200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ACA - ANTI CARDIOLIPIN Ab-IgA",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Rubella Virus Avidity Test",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY PHOSPHORUS",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LEPTOSPIRA ANTIGEN DETECTION",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BETA 2 -glycoprotein I -IgG",
+    "rate": 1050,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Allergen Individual-Drug Nimesulide Pain Killer",
+    "rate": 1400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "FGF-23",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TPMT Enzyme Activity",
+    "rate": 4750,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SERUM IRON LEVEL",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Haemophilia Profile",
+    "rate": 3740,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "VITAMIN E ESTIMATION",
+    "rate": 4400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BETA 2 -Glycoprotein 1-IgA",
+    "rate": 1450,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Dengue & Chikungunya PCR Combo Test",
+    "rate": 3600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HBsAg (Automation) Australia Antigen",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ERYTHROPOIETIN SERUM",
+    "rate": 2300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ACA - ANTI CARDIOLIPIN Ab-IgG",
+    "rate": 660,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "NMDA Receptor antibodies CSF",
+    "rate": 6630,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PROTEIN - S",
+    "rate": 4200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "MEASLES IgM (Rubeola IgM) CSF",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE OSMOLARITY-OSMOLALITY",
+    "rate": 1050,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "O.T. Swab culture -6",
+    "rate": 900,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CRYPTOCOCCUS ANTIGEN CSF",
+    "rate": 2500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTIBODY TEST FOR E.HYSTOLYTICA",
+    "rate": 1000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "O.T. Swab culture -5",
+    "rate": 750,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "ACID PHOSPHATASE",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LACTATE PLASMA",
+    "rate": 1300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY POTASSIUM",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY TEST COMPLETE PANEL(Mini)",
+    "rate": 6000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "O.T. Swab culture -4",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "GAD 65 Antibody for Type 1 diabetes",
+    "rate": 5800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "DMD/BMD-79 exons Deletion / Duplication Analysis MLPA Blood",
+    "rate": 15900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY PROTEINS",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RHEUMATOID FACTOR IGM (ELISA)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HOMA Index (FBS/Insulin Fasting)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "APA ANTI PHOSPHOLIPID AB.IgM",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "O.T. Swab culture -2",
+    "rate": 300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "ANDROSTENEDIONE",
+    "rate": 2100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CA-15.3",
+    "rate": 1400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RUBELLA ANTIBODY IgM",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CALCITONIN",
+    "rate": 2350,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ADRENALINE",
+    "rate": 3300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ALBERT STAIN",
+    "rate": 250,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "24 Hrs. URINARY CITRATE",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LEPTOSPIRA (IGG) QUALITATIVE",
+    "rate": 1250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PHENOBARBITONE",
+    "rate": 1100,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PAP SMEAR* (CERVICAL CYTOLOGY)",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "Neonatal screening(TMS)",
+    "rate": 4900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TB PCR MDR profile",
+    "rate": 2000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Parvovirus B19 IgG Antibody",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "24 Hrs. URINARY CORTISOL",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LITHIUM",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANA(ELISA)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IgG-4",
+    "rate": 6800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "TSH Receptor Antibody (TSI)",
+    "rate": 4600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ACETYLCHOLINE RECEPTOR AUTOANTIBODIES",
+    "rate": 3100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIVER ABCESS FOR AMEOBA",
+    "rate": 200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "C-PEPTIDE (Post Meal)",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "INSULIN ,GLUCOSE TOLERANCE TEST,3SAMPLES",
+    "rate": 2700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Beta HCG (QUANTITATIVE)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GIEMSA STAIN",
+    "rate": 150,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "INDIA INK PREPARATION FOR CRYPTOCOCCUS",
+    "rate": 200,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "URINE FOR PH VALUE",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti Hbe",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BENCE JONES PROTEIN (UR)",
+    "rate": 1090,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Thrombotic Profile",
+    "rate": 16870,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI MITROCHONDRIAL ANTIBODY",
+    "rate": 2500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs. URINE PORPHYRINS",
+    "rate": 6600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PORPHOBILINOGEN SPOT URINE",
+    "rate": 4250,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Chromogranin A Level",
+    "rate": 6900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HBe Ag",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "24 Hrs Urinary Metabolic Profile",
+    "rate": 4500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Anti HBs",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "EPINEPHRINE BLOOD(ADRENALINE)",
+    "rate": 3300,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANTI SMOOTH MUSCLE ANTIBODIES",
+    "rate": 1900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Amoebiasis Antibodies-(IgG)",
+    "rate": 1500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HEPATITIS B VIRUS DNA (QUANTITATIVE)",
+    "rate": 3500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "DVT PANEL DEEP VEIN THROMBOSIS",
+    "rate": 12840,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ANCA-P (MPO) By ELISA",
+    "rate": 1200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ANA by IFA",
+    "rate": 900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SERUM MYOGLOBIN",
+    "rate": 2630,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HERPES (CSF + SERUM)",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Aspergillosis IgE antibodies",
+    "rate": 1400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SCA3 (MJD) SPINOCEREBELLAR ATAXIA TYPE 3 REPEATS",
+    "rate": 3260,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CHIKUNGUNYA TEST-IgM",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Endomysial Antibody IgG Antibody",
+    "rate": 3000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "CORTISOL (EVENING)",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Water Test Analysis",
+    "rate": 400,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "FACTOR VII",
+    "rate": 3900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "17 HYDROXY PROGRESTERONE LEVEL",
+    "rate": 1650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Dengue Real Time PCR",
+    "rate": 1800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALLERGY ECZEMA/URTICARIA PANEL",
+    "rate": 3500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Hepatitis B Virus (HBV) HBV precore mutations",
+    "rate": 5600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "AMYLASE FLUID",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Mitochondrial(M2) Antibody",
+    "rate": 1800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SECOND OPINION CHARGES",
+    "rate": 1100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CBC/ESR",
+    "rate": 460,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE SUGAR 3 Hrs",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE SUGAR 2 Hrs",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE SUGAR 1 Hrs",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GTT OF URINE",
+    "rate": 180,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PLATELET DISTRIBUTION WIDTH (PDW)",
+    "rate": 170,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MEAN PLATELET VOL.",
+    "rate": 110,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MCHC (MEAN CORPUSCULAR HB Conc)",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MCH (MEAN CORPUSCULAR HB)",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "M C V (MEAN CORPOSCULAR VOLUME)",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE FOR DYSMORPHIC RBCs",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOTAL LIPIDS",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LDL CHOLESTEROL",
+    "rate": 280,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SALMONELLA TYPHI IgG",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Spot Urine Creatinine",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SMEAR FOR AFB",
+    "rate": 200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "T&D(CBC 3 Part)",
+    "rate": 200,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "Body Fluid (Amniotic Fluid) Routine",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CONJUGATED (D. BIL)",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GFR (with creatinine serum)",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Blood Group (Reverse Grouping by gel method)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CRP LATEX",
+    "rate": 270,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR 3 Hrs. (POST PRANDIAL)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "WIDAL TEST",
+    "rate": 130,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PREGNANCY TEST (CARD)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LE CELL PHENOMENON",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CALCIUM (Serum)",
+    "rate": 180,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "NASAL SMEAR FOR EOSINOPHILS",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SODIUM (Na+)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(ASCITIC FLUID) ROUTINE & MICROSCOPY",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FNAC WITH PROCEDURE",
+    "rate": 1500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "MALARIA ANTIGEN",
+    "rate": 220,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DENGUE QUALITATIVE IgG, IgM, NS1",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE SUGAR PP",
+    "rate": 30,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE CALCIUM / CREATININE RATIO",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD GROUP ABO",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE SUGAR(RANDOM)",
+    "rate": 30,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SALMONELLA TYPHI Igm",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIPASE (SERUM)",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "G6PD (QUALITATIVE)",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR PRE LUNCH",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GLUCOSE TOLERANCE TEST (3 samples)",
+    "rate": 180,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SAAG",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CYTOLOGY FLUID",
+    "rate": 600,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "RA RHEUMATOID FACTOR (LATEX)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HLAB27 By PCR",
+    "rate": 2400,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "LAP-Score",
+    "rate": 1265,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "ATYPICAL CELLS",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GLUCOSE CSF",
+    "rate": 70,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Blood Group",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VDRL (SYPHILIS)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SPUTUM ROUTINE (Grams stain & AFB)",
+    "rate": 300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CPK",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SPOT URINE PROTEIN/CREATININE RATIO",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ELECTROLYTES",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SGOT ( AST)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Body Fluid Routein(Peritoneal) Examination",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VDRL (TITRE) IN DILUTION",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR (FASTING)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BUN(BLOOD UREA NITROGEN)",
+    "rate": 130,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR 2 HOUR POST DINNER",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CRP C-REACTIVE PROTEIN (QUANTITATIVE)",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR (RANDOM)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Chloride Urine (Spot)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLAST CELLS",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "UREA",
+    "rate": 130,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ASO TITRE (QUANTITATIVE)",
+    "rate": 450,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE UROBAG",
+    "rate": 20,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GAMMA GT",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CHLORIDE (CSF)",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SEMEN FRUCTOSE",
+    "rate": 70,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(CSF) ROUTINE & MICROSCOPY",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HDL Cholestrol",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TROPONIN -I",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Celiac Disease",
+    "rate": 700,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "LDH (SERUM)",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "AMYLASE SERUM",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RETICULOCYTE COUNT",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "NAIL SCRAPPING FOR FUNGUS",
+    "rate": 300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "URINE FOR ALBUMIN & SUGAR",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID NASAL DISCHARGE (ROUTINE & MICROSCOPY)",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR 2 Hrs. POST LUNCH",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE UROBILINOGEN",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "KOH PREP. FOR FUNGUS",
+    "rate": 300,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "POTASSIUM URINE (SPOT)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE SUGAR FASTING",
+    "rate": 30,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PROTEINS URINE",
+    "rate": 330,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IONIZED CALCIUM",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(SYNOVIAL FLUID) ROUTINE & MICRO.",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VIT-B12",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR PRE DINNER",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOTAL T4",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE EXAMINATION REPORT",
+    "rate": 80,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URIC ACID",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR 1 Hrs.",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(PLEURAL FLUID) ROUTINE & MICRO.",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SLIT SKIN SMEAR FOR LEPRA BACILLI (6 sites)",
+    "rate": 600,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "HBA1C (GLYCOSYLATED HB)",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CHLORIDE (SERUM)",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "EXTENDED CBC",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE CREATININE",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LDL-LOW DENSITY LIPOPROTEINS (DIRECT)",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VITAMIN D3 (1,25-OH)",
+    "rate": 1800,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "TOTAL T3",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "STOOL FAT GLOBULES",
+    "rate": 100,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "SPUTUM FOR EOSINOPHILS",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOTAL PROTEINS FLUID",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MAGNESIUM URINE",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HAEMOGRAM (CBC)",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "STOOL EXAMINATION",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Triglycerides",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "WIDALTUBE TEST",
+    "rate": 200,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "MALARIAL PARASITE",
+    "rate": 80,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URINE ALBUMIN",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CPK-MB",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "REDUCING SUGAR (URINE)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIPASE (FLUID)",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BUCCAL SMEAR",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PERIPHERAL SMEAR (PBF)",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SODIUM,POTASSIUM",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "E.S.R.(Corrected)",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD GLUCOSE LOAD TEST(SINGLE SAMPLE)",
+    "rate": 70,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(BRONCHIAL LAVAGE) ROUTINE & MICRO.",
+    "rate": 500,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD SUGAR (POST PRANDIAL)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "OCCULT BLOOD",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BILE SALTS",
+    "rate": 40,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CREATININE SERUM",
+    "rate": 130,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MT TEST",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Platelet Antibodies Qualitative Test",
+    "rate": 6800,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "BLOOD SUGAR (2 HOUR)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "REDUCING SUGAR (STOOL)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PAP SMEAR (LBC)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "APTT (PTTK)",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HBsAg (Australia Antigen)(CARD)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SEMEN ANALYSIS",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BUN / CREATININE RATIO",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "EXTENDED LIPID PROFILE",
+    "rate": 2350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIPID PROFILE (NON FASTING)",
+    "rate": 650,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FREE T4",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FREE T3",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BAND CELLS & TOXIC GRANULES",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HAEMOGLOBIN (Hb)",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PCV PACKED CELLS VOLUME",
+    "rate": 80,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ABSOLUTE BASOPHIL COUNT",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ABSOLUTE EOSINOPHIL COUNT",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ABSOLUTE LYMPHOCYTE COUNT",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ABSOLUTE MONOCYTE COUNT",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ABSOLUTE NEUTROPHIL COUNT",
+    "rate": 120,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CALCIUM URINE",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SODIUM URINE (SPOT)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SPECIFIC GRAVITY (URINE)",
+    "rate": 50,
+    "sodaniShare": 100,
+    "vedaShare": 0
+  },
+  {
+    "serviceName": "ALKALINE PHOSPHATASE",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "URIC ACID URINE",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BILIRUBIN(SERUM)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ALBUMIN SERUM",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti Gliadin Antibodies-IgG",
+    "rate": 1900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IgE TOTAL",
+    "rate": 600,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ADA ADENOSINE DEAMINASE",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ESR ERYTHROCYTE SED. RATE (WG)",
+    "rate": 100,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ADA ADENOSINE DEAMINASE (FLUID)",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CLOTTING TIME(Capillary Method)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "KETONE URINE",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Nicotin",
+    "rate": 550,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "TOTAL PROTEINS (ALB,GLB)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HIV 1 & 2",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BILE PIGMENTS",
+    "rate": 40,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "D-DIMER (Quantitative)",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PH VALUE (STOOL)",
+    "rate": 40,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "POTASSIUM SERUM (K+)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SICKLING TEST",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti Gliadin Antibodies-IgA",
+    "rate": 1900,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "GLUCOSE TOLERANCE TEST (5 samples)",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BODY FLUID(LIVER AB.) ROUTINE & MICRO.",
+    "rate": 500,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "WET PREPRATION",
+    "rate": 200,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "SMEAR FOR EOSINOPHILS",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "RA RHEUMATOID FACTOR (QUANTITATIVE)",
+    "rate": 400,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "MAGNESIUM SERUM",
+    "rate": 300,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HANGING DROP PREPRATION (STOOL)",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PROTHROMBIN TIME (PT)",
+    "rate": 280,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SPUTUM FOR AFB",
+    "rate": 250,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "PROTEINS - CSF",
+    "rate": 200,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD SUGAR 4 Hrs. (POST PRANDIAL)",
+    "rate": 50,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "STRESS TEST(TMT)",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CTMT",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "COMPUTERISED THREADMILL (CTMT) WITH REPORT",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "SGPT(ALT)",
+    "rate": 150,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ERYTHROCYTE SED. RATE (WIN)",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "IMMUNOGLOBIN-IgM",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "QUAD TEST",
+    "rate": 2700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DOUBLE MARKER",
+    "rate": 2000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Histopathology Extra Large (Radical)",
+    "rate": 4000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "PCOD PROFILE EXTENDED",
+    "rate": 5700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LIVER FUNCTION PROFILE (with PT)",
+    "rate": 1930,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PRE OPERATIVE PROFILE (1)",
+    "rate": 1060,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Special Offer@149",
+    "rate": 780,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Preliminary Report",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "QUAD TEST Graph",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "DOUBLE MARKER Graph",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HDL-Cholesterol",
+    "rate": 250,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LDL-Cholesterol",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "VLDL",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Cholesterol/HDL Cholesterol Ratio",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LDL-Cholesterol/HDL Cholesterol Ratio",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "AMA-M2",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "M2-3E (BPO)",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Sp100",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PML",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "gp210",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LKM-1",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LC-1",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SLA/LP",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Ro-52",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HBsAg",
+    "rate": 350,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti HAV Total",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti HAV IgM",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "FBS",
+    "rate": 60,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Insulin Fasting",
+    "rate": 940,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "LDL-Chlesterol",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Apolipoprotein A1",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Apolipoprotein B",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Apo A/Apo B",
+    "rate": 700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Lipoprotein A",
+    "rate": 1000,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "nRNP/SM",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Sm",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SS-A",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Ro 52kD",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "SS-B",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Scl-70",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PM-Scl",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Jo-1",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CENP B(Centromere Protein B)",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PCNA (Proliferating cell Nuclear Antigen)",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "ds DNA",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Nucleosome",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Histones",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Ribosomal P-Protein",
+    "rate": 0,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "HBeAg",
+    "rate": 850,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "Anti HBc Total",
+    "rate": 800,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "PRE OPERATIVE PROFILE (With Anti HCV)",
+    "rate": 1860,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "BLOOD LEAD LEVEL",
+    "rate": 2150,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "Adiponectin",
+    "rate": 2900,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "SCA (1,2,3,6,7,12&17 TYPES)",
+    "rate": 15000,
+    "sodaniShare": 90,
+    "vedaShare": 10
+  },
+  {
+    "serviceName": "PCOD PROFILE 1 (EXTENDED)",
+    "rate": 5700,
+    "sodaniShare": 48,
+    "vedaShare": 52
+  },
+  {
+    "serviceName": "CT 3D FOREARM /RADIUS+ULNA",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT RADIUS & ULNA / FOREARM 3D MPR",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT 3D Lower Limb Single",
+    "rate": 9500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Abdomen Angio",
+    "rate": 8500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Abdomen Angio/GI ANGIO",
+    "rate": 8500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO (Brain+Carotid)",
+    "rate": 7500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO (COELIAC)",
+    "rate": 7500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO (CORONARY WITH CALCIUM SCORING)",
+    "rate": 8000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO (PULMONARY)",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO (RENAL)",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO BRAIN (CTA)",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO CARDIAC (PAED)",
+    "rate": 11000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO FACE",
+    "rate": 7300,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO LOWER LIMB BOTH",
+    "rate": 10000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO LOWER LIMB SINGLE",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO UPPER LIMB (BOTH)",
+    "rate": 10000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIO UPPER LIMB SINGLE",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANGIOGRAPHY (CAROTIDS)",
+    "rate": 5500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ANKLE 3D MPR",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Aortogram + Single Upper Limb",
+    "rate": 12000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Aortogram With B/L Lower Limb",
+    "rate": 12500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Aortogram/CT ANGIO AROTA",
+    "rate": 9000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Aortogram",
+    "rate": 9000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Both feet (3D/MPR)",
+    "rate": 7400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Both feet 3D MPR",
+    "rate": 7400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BOTH FIBULA AND TIBIA\\CT LEG",
+    "rate": 6000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT 3D TIBIA & FIBULA / LEG",
+    "rate": 6000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN + ORBIT",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN + ORBIT +PNS",
+    "rate": 6500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN + PNS (AXIAL)",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN + PNS (Axial/Cor/Sag)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN + PNS (AXIAL/SAGGITAL/CORONAL)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN + PNS (CORONAL)",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN DETAIL STUDY(BRAIN+TEMPORAL BONE+PNS CUTS)",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN EXTENDED (TRAUMA) PROTOCOL",
+    "rate": 5500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Brain Stroke Protocol (CT Plain/ MRI Diffusion)",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Brain Venogram/CTV",
+    "rate": 5500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN WITH CERVICAL SPINE SCREENING",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN+ORBIT (AXIAL+CORONAL SECTION)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT BRAIN+TEMPORAL BONE",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Calcium Score",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Cardiac",
+    "rate": 8000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Cervical Spine",
+    "rate": 3700,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Cervical-Flexion/Extension",
+    "rate": 6500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST (SCREENING)",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST + NECK",
+    "rate": 6000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST + UPPER ABDOMEN",
+    "rate": 6800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST + WHOLE ABDOMEN",
+    "rate": 7800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST HRCT",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST WITH CONTRAST",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CHEST WITH VIRTUAL BRONCHOSCOPY",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CISTERNOGRAPHY",
+    "rate": 8500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Coronary Angio (Post CABG)",
+    "rate": 10000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Coronary With Chest (Combi)",
+    "rate": 11000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CSF Rhinorrhoea PNS",
+    "rate": 9000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT CV Junction",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Dedicated Cuts CD (Dr.Deepak Jajoo)",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Dorsal Spine",
+    "rate": 4900,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Dorso-Lumber Spine",
+    "rate": 6900,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ELBOW 3D MPR",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT EMERGENCY CHARGES",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Face",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Face + Neck",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Facial + Head (3D)",
+    "rate": 6200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT FACIAL BONES (AXIAL/MPR/3D",
+    "rate": 4800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT FACIAL BONES 3D MPR",
+    "rate": 4800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT FOOT (AXIAL/MPR/3D",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT GUIDED BIOPSY (Procedure+consumables)",
+    "rate": 8000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT GUIDED BIOPSY (PROCEDURE & CONSUMABLES)",
+    "rate": 8000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT HAND 3D MPR",
+    "rate": 3700,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT HIP (AXIAL/MPR/3D) Left",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT HIP (AXIAL/MPR/3D) Right",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT HUMERUS",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT HUMERUS 3D MPR",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT KNEE 3D MPR",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT KUB Plain",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT LEG 3D MPR",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Limited Cuts - CD",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Long Bone- 3D CT",
+    "rate": 4500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT LOWER ABDOMEN/CT Pelvis soft tissue)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PELVIS SOFT TISSUE/LOWER ABDOMEN",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Lower Limb Venogram Single",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Lumber Spine",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT NECK (SOFT TISSUE)",
+    "rate": 3750,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Neck + MR Limited(Combi Scan)",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ORBITS (AXIAL/CORONAL)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT ORBITS (AXIAL/SAGGITAL/CORONAL)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PELVIS 3D With Both HIP",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PELVIS 3D MPR WITH BOTH HIPS",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PNS (CORONAL/ AXIAL)",
+    "rate": 2700,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PNS (CORONAL/ AXIAL/SAGITAL)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PNS + ORBIT",
+    "rate": 5300,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT PNS Coronal",
+    "rate": 2100,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT SCAN NECK WITH ANGIO",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Scanogram",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT SELLA (AXIAL/CORONAL)",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT SHOULDER 3D MPR",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT SINOGRAM",
+    "rate": 5500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Spine Flex. & Ext. (Dorsal Lumber)",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Spine Flex. & Ext. Dorso-Lumber",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT SPINE NAVIGATION",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT SPINE ONE REGION (3D)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT TEMPORAL BONE",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT THIGH (SOFT TISSUE)",
+    "rate": 5500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT TM JOINT (B/L)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT TRIPHASIC STUDY OF LIVER",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT UPPER ABDOMEN",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT UROGRAPHY",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT UROGRAPHY /KUB/LOWER ABDOMEN/PELVIS(3D)",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT VERTIGO PROFILE",
+    "rate": 7000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT VIRTUAL ENDOSCOPY (BRONCHUS)",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT WHOLE ABDOMEN & PELVIS",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT WHOLE ABDOMEN +UROGRAPHY",
+    "rate": 6500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Whole Abdomen Triphase",
+    "rate": 6500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Whole Spine",
+    "rate": 9000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Whole Spine (Flexion/Extension)",
+    "rate": 9500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT WRIST (AXIAL/MPR/3D",
+    "rate": 0,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT WRIST 3D MPR",
+    "rate": 3900,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "Lead Apron Testing (CT)",
+    "rate": 1600,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "Lead Apron Testing (X-Ray)",
+    "rate": 800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "MLC Charges",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CT Tru Cut Biopsy Without Histo",
+    "rate": 9500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "USG Tru Cut Biopsy Without Histo",
+    "rate": 8500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "X-RAY OPG",
+    "rate": 500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "CD SCROTAL+TRUS",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD UPPER LIMB VENOUS LEFT LIMB",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD LOWER LIMB A+V (ONE LIMB)",
+    "rate": 4400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PENILE DOPPLER",
+    "rate": 4500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PAROTID GLANDS SONOGRAPHY",
+    "rate": 1800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD TARGETED SCAN (TRIPLE)",
+    "rate": 9000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SMALL PART",
+    "rate": 1800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD HIP JOINT (Both)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD BOTH LOWER LIMB(ARTERIAL)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PELVIC + ABDOMEN",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD EYE B SCAN (BOTH)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD FETAL NEUROGRAM",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD BOTH UPPER LIMB (A+V)",
+    "rate": 8800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD BOTH LOWER LIMB(VENOUS)",
+    "rate": 4400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SCROTAL",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD Small Part Doppler Study",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD UPPER LIMB ARTERIAL RIGHT LIMB",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SCROTAL+LOWER ABDOMEN",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD BOTH UPPER LIMB(VENOUS)",
+    "rate": 4400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD TARGETED SCAN (LEVEL-2)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD TRANSRECTAL + WHOLE ABDOMEN",
+    "rate": 4500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD Nerve Tracing",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "FIRST TRIMESTER SCAN / NT Scan",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD TRANSRECTAL (TRUS)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD FOETAL ECHO+OBST DOPPLER",
+    "rate": 6000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD HEPATIC VEINS & LIVER DOPPLER",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD MESENTRIC ARTERIAL DOPPLER+SONO ABDOMEN",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SHOULDER SONOGRAPHY (Both)",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD FOETAL ECHO(TWINS)+OBS",
+    "rate": 8000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD UPPER LIMB ARTERIAL LEFT LIMB",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD KNEE JOINT SONOGRAPHY (BOTH)",
+    "rate": 3600,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD FOETAL ECHO",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD BOTH UPPER LIMB(ARTERIAL)",
+    "rate": 4400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD OBSTETRIC & TARGETED SCAN",
+    "rate": 5000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD Early Anamoly 2D Scan (15 to 17 wks)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD LOWER LIMB VENOUS SYSTEM (RIGHT)",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD OBSTETRIC & ROUTINE (TWINS)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD 3D/MASS LESION/VOLUME ADDITIONAL CHARGES",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD TARGETED SCAN",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD AV Fistula Mapping (Foream)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SCROTAL (CHILD)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD AORTA ILIAC",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD FOETAL ECHO + OBST",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD RENAL ARTERIAL DOPPLER+SONO ABDOMEN",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD KNEE JOINT SONOGRAPHY (SINGLE)",
+    "rate": 1800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SKULL(CRANIAL) SONOGRAPHY",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SOFT TISSUE SONOGRAPHY",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD UPPER LIMB VENOUS RIGHT LIMB",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD RENAL DOPPLER",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PORTAL VENOUS DOPPLER+SONO UPPER ABDOMEN",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD FOETAL ECHO + TARGETED",
+    "rate": 9000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SUBMANDIBULAR(SALIVARY) GLAND SONOGRAPHY",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD NECK SONOGRAPHY",
+    "rate": 1800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD UPPER LIMB A+V (ONE LIMB)",
+    "rate": 4400,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SMALL PART LIMITED SECTION",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD Hip Joint (Single)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SHOULDER SONOGRAPHY",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PELVIC (TVS & 3D)",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD THYROID SONOGRAPHY",
+    "rate": 1800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD OBSTETRIC & ROUTINE",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD SCROTAL+WHOLE ABDOMEN",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD LOWER LIMB VENOUS SYSTEM (LEFT)",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "FIRST TRIMESTER SCAN (NT TWINS)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD RENAL ARTERIAL DOPPLER+SONO KUB",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PERIANAL USG",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD PORTAL VENOUS DOPPLER+SONO ABDOMEN",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD TARGETED SCAN (TWINS)",
+    "rate": 6000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD BOTH LOWER LIMB (A+V)",
+    "rate": 8800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD NECK SONOGRAPHY (CHILD)",
+    "rate": 1800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD EYE B SCAN (ONE)",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD LOWER LIMB ARTERIAL LEFT LIMB",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD Temporal Artery Doppler",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "FIRST TRIMESTER SCAN (NT TRIPLET)",
+    "rate": 6000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD LOWER LIMB ARTERIAL RIGHT LIMB",
+    "rate": 2200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD CAROID/EXTRA CRANIAL VESSEL DOPPLER",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD ANKLE SONOGRAPHY",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "X-RAY MAMMOGRAPHY+SONO(SINGLE BREAST)",
+    "rate": 2000,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY MAMMOGRAPHY + SONO HRFUS",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY MAMMOGRAPHY (SINGLE BREAST)",
+    "rate": 1500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "X-RAY MAMMOGRAPHY (BOTH BREAST)",
+    "rate": 2500,
+    "sodaniShare": 70,
+    "vedaShare": 30
+  },
+  {
+    "serviceName": "SONO PREGNANCY TEST (TRIPLET) (VIABILITY SCAN)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO FOLLICULAR MATURATION STUDY",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO WHOLE + OBSTETRIC",
+    "rate": 2500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO ARFI LIVER+WHOLE ABDOMEN",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO GUIDED (DIAGNOSTIC)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "LOWER ABDOMEN (M)",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "LOWER ABDOMEN (F)",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO PELVIC",
+    "rate": 1200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO OBSTETRIC (TWINS)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CHEST SONOGRAPHY",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO UPPER+OBSTETRIC",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO MAMMOGRAPHY (SINGLE BREAST)",
+    "rate": 1000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO RENAL, K.U.B. (F) SONOGRAPHY",
+    "rate": 800,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO ARFI LIVER+UPPER ABDOMEN",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO URETHROGRAM",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO BLADDER/PROSTATE",
+    "rate": 1000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO FOLLOWUP",
+    "rate": 1000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO RENAL, K.U.B. (M) SONOGRAPHY",
+    "rate": 1200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO LOWER + OBSTETRIC",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO FOLLOWUP OBSTETRIC",
+    "rate": 1000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO OBSTETRIC (TRIPLET)",
+    "rate": 4000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO MAMMOGRAPHY (BOTH BREAST)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO ARFI LIVER-FIBRO SCAN",
+    "rate": 3500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO OBST",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO FOLLICULAR MATURATION STUDY (PER TERM)",
+    "rate": 500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO LOWER ABDOMEN+OBSTETRIC",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO WHOLE ABDOMEN (Child)",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO PREGNANCY TEST(VIABILITY SCAN)",
+    "rate": 1000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO UPPER ABDOMEN SONOGRAPHY",
+    "rate": 1200,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO ARFI BREAST ELASTOGRAPHY",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO GUIDED (THERAPEUTIC)",
+    "rate": 3000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO WHOLE ABDOMEN (MALE)",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "SONO WHOLE ABDOMEN (FEMALE)",
+    "rate": 1500,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD ECHOCARDIOGRAPHY (ADULT)",
+    "rate": 2000,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  },
+  {
+    "serviceName": "CD ECHOCARDIOGRAPHY (PEAD)",
+    "rate": 2300,
+    "sodaniShare": 80,
+    "vedaShare": 20
+  }
+]

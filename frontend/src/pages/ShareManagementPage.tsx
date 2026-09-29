@@ -51,8 +51,7 @@ export const ShareManagementPage: React.FC = () => {
   // Upload Modal State
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [selectedUploadFile, setSelectedUploadFile] = useState<File | null>(null);
-  const [uploadReplaceMode, setUploadReplaceMode] = useState<'month' | 'append' | 'all'>('month');
-  const [uploadCustomMonth, setUploadCustomMonth] = useState('');
+  const [isUploadDragActive, setIsUploadDragActive] = useState(false);
 
   // Quick configure rate modal
   const [quickRateModal, setQuickRateModal] = useState<{
@@ -133,10 +132,6 @@ export const ShareManagementPage: React.FC = () => {
 
     const formData = new FormData();
     formData.append('file', selectedUploadFile);
-    formData.append('replaceMode', uploadReplaceMode);
-    if (uploadCustomMonth.trim()) {
-      formData.append('targetMonth', uploadCustomMonth.trim());
-    }
 
     try {
       setUploading(true);
@@ -154,7 +149,6 @@ export const ShareManagementPage: React.FC = () => {
       // Close modal and reset
       setShowUploadModal(false);
       setSelectedUploadFile(null);
-      setUploadCustomMonth('');
       if (fileInputRef.current) fileInputRef.current.value = '';
 
       fetchRecords(1);
@@ -164,6 +158,27 @@ export const ShareManagementPage: React.FC = () => {
     } finally {
       setUploading(false);
     }
+  };
+
+  const clearUploadFile = () => {
+    setSelectedUploadFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const selectUploadFile = (file: File | null | undefined) => {
+    if (!file) return;
+    const name = file.name.toLowerCase();
+    if (!name.endsWith('.xlsx') && !name.endsWith('.xls')) {
+      showStatus('error', `"${file.name}" is not a supported file. Please choose an Excel file (.xlsx or .xls).`);
+      return;
+    }
+    setSelectedUploadFile(file);
+  };
+
+  const handleUploadDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsUploadDragActive(false);
+    selectUploadFile(e.dataTransfer.files?.[0]);
   };
 
   // Export to Excel (Scoped to current month filter or explicit target month)
@@ -286,10 +301,14 @@ export const ShareManagementPage: React.FC = () => {
             onClick={() => handleExport()}
             disabled={records.length === 0}
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm transition-all shadow-xs disabled:opacity-40"
-            title={selectedMonth !== 'ALL' ? `Export ${currentMonthInfo?.monthName || selectedMonth} only` : 'Export all months (multi-sheet)'}
+            title={
+              selectedMonth !== 'ALL'
+                ? `Export ${currentMonthInfo?.monthName || selectedMonth} only`
+                : 'Export all months into a single multi-sheet file'
+            }
           >
             <Download className="w-4 h-4 text-emerald-600" />
-            {selectedMonth !== 'ALL' ? `Export ${currentMonthInfo?.monthName || selectedMonth} Excel` : 'Export All Months (Multi-Sheet)'}
+            Export Excel
           </button>
 
           <button
@@ -314,110 +333,6 @@ export const ShareManagementPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Monthly Selector & Manager Bar */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-4 text-white shadow-md">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
-              <Calendar className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs uppercase tracking-wider font-semibold text-slate-400">
-                Active Billing Month
-              </div>
-              <div className="text-lg font-bold text-white flex items-center gap-2">
-                <span>
-                  {selectedMonth === 'ALL'
-                    ? 'All Uploaded Months'
-                    : currentMonthInfo?.monthName || selectedMonth}
-                </span>
-                {currentMonthInfo && (
-                  <span className="text-xs font-normal font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full">
-                    {currentMonthInfo.count} bills
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Month Selection Buttons / Chips with individual export */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div
-              className={`inline-flex items-center rounded-xl transition-all ${
-                selectedMonth === 'ALL'
-                  ? 'bg-emerald-500 text-white shadow-sm'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'
-              }`}
-            >
-              <button
-                onClick={() => setSelectedMonth('ALL')}
-                className="px-3.5 py-1.5 text-xs font-semibold"
-              >
-                All Months ({availableMonths.reduce((acc, m) => acc + m.count, 0)})
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleExport('ALL');
-                }}
-                className={`p-1.5 mr-1 rounded-lg transition-colors ${
-                  selectedMonth === 'ALL'
-                    ? 'hover:bg-emerald-600 text-emerald-100 hover:text-white'
-                    : 'hover:bg-slate-600 text-slate-400 hover:text-slate-200'
-                }`}
-                title="Export All Months as Multi-Sheet Workbook"
-              >
-                <Download className="w-3.5 h-3.5" />
-              </button>
-            </div>
-
-            {availableMonths.map((m) => (
-              <div
-                key={m.monthKey}
-                className={`inline-flex items-center rounded-xl transition-all ${
-                  selectedMonth === m.monthKey
-                    ? 'bg-emerald-500 text-white shadow-sm ring-2 ring-emerald-400/50'
-                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'
-                }`}
-              >
-                <button
-                  onClick={() => setSelectedMonth(m.monthKey)}
-                  className="flex items-center gap-2 pl-3 py-1.5 pr-1.5 text-xs font-semibold"
-                >
-                  <span>{m.monthName}</span>
-                  <span
-                    className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
-                      selectedMonth === m.monthKey
-                        ? 'bg-emerald-700 text-white'
-                        : 'bg-slate-700 text-slate-300'
-                    }`}
-                  >
-                    {m.count}
-                  </span>
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleExport(m.monthKey);
-                  }}
-                  className={`p-1.5 mr-1 rounded-lg transition-colors ${
-                    selectedMonth === m.monthKey
-                      ? 'hover:bg-emerald-600 text-emerald-100 hover:text-white'
-                      : 'hover:bg-slate-600 text-slate-400 hover:text-slate-200'
-                  }`}
-                  title={`Export ${m.monthName} Excel`}
-                >
-                  <Download className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            ))}
-
-            {availableMonths.length === 0 && (
-              <span className="text-xs text-slate-400 italic">No monthly sheets uploaded yet</span>
-            )}
-          </div>
-        </div>
-      </div>
 
       {/* Status Alert Banner */}
       {statusMessage && (
@@ -643,11 +558,30 @@ export const ShareManagementPage: React.FC = () => {
 
         {/* Filters */}
         <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
+          {/* Month Selector Filter */}
+          <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-1.5 focus-within:ring-2 focus-within:ring-emerald-500/20">
+            <Calendar className="w-3.5 h-3.5 text-slate-400" />
+            <select
+              value={selectedMonth}
+              onChange={(e) => setSelectedMonth(e.target.value)}
+              className="text-xs font-semibold bg-transparent border-none outline-none text-slate-700 cursor-pointer pr-1"
+            >
+              <option value="ALL">
+                All Months ({availableMonths.reduce((acc, m) => acc + m.count, 0)})
+              </option>
+              {availableMonths.map((m) => (
+                <option key={m.monthKey} value={m.monthKey}>
+                  {m.monthName} ({m.count})
+                </option>
+              ))}
+            </select>
+          </div>
+
           {/* Billing Group Filter */}
           <select
             value={selectedGroup}
             onChange={(e) => setSelectedGroup(e.target.value)}
-            className="px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-700"
+            className="px-3 py-2 text-xs font-semibold bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-700 cursor-pointer"
           >
             <option value="ALL">All Billing Groups</option>
             {billingGroups.map((g) => (
@@ -880,19 +814,14 @@ export const ShareManagementPage: React.FC = () => {
       {showUploadModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs">
           <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl w-full max-w-lg overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-            <div className="p-5 border-b border-slate-100 flex items-center justify-between">
+            <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                   <Upload className="w-5 h-5" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 text-base">
-                    Upload Monthly Billing Excel
-                  </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">
-                    Select a monthly sheet (.xlsx / .xls) to compute shares
-                  </p>
-                </div>
+                <h3 className="font-bold text-slate-900 text-base">
+                  Upload Monthly Billing Excel
+                </h3>
               </div>
               <button
                 onClick={() => setShowUploadModal(false)}
@@ -902,130 +831,62 @@ export const ShareManagementPage: React.FC = () => {
               </button>
             </div>
 
-            <form onSubmit={handleUploadSubmit} className="p-6 space-y-5">
-              {/* File Selector */}
-              <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Excel File (.xlsx / .xls)
-                </label>
+            <form onSubmit={handleUploadSubmit} className="p-5 space-y-4">
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={(e) => selectUploadFile(e.target.files?.[0])}
+                accept=".xlsx, .xls"
+                className="hidden"
+              />
+
+              {selectedUploadFile ? (
+                <div className="flex items-center gap-3 p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <FileSpreadsheet className="w-5 h-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-xs text-slate-800 truncate">
+                      {selectedUploadFile.name}
+                    </div>
+                    <div className="text-[11px] text-slate-500 font-mono">
+                      {(selectedUploadFile.size / 1024).toFixed(1)} KB
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={clearUploadFile}
+                    title="Remove file"
+                    className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-white rounded-lg transition-colors shrink-0"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
                 <div
                   onClick={() => fileInputRef.current?.click()}
-                  className="border-2 border-dashed border-slate-300 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all rounded-2xl p-6 text-center cursor-pointer flex flex-col items-center justify-center gap-2"
+                  onDragOver={(e) => {
+                    e.preventDefault();
+                    setIsUploadDragActive(true);
+                  }}
+                  onDragLeave={() => setIsUploadDragActive(false)}
+                  onDrop={handleUploadDrop}
+                  className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition-all flex flex-col items-center justify-center gap-2 ${
+                    isUploadDragActive
+                      ? 'border-emerald-500 bg-emerald-50'
+                      : 'border-slate-300 hover:border-emerald-500 hover:bg-emerald-50/30'
+                  }`}
                 >
-                  <input
-                    type="file"
-                    ref={fileInputRef}
-                    onChange={(e) => {
-                      if (e.target.files?.[0]) setSelectedUploadFile(e.target.files[0]);
-                    }}
-                    accept=".xlsx, .xls"
-                    className="hidden"
-                  />
                   <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
                     <FileSpreadsheet className="w-6 h-6" />
                   </div>
-                  {selectedUploadFile ? (
-                    <div>
-                      <div className="font-bold text-sm text-slate-800">
-                        {selectedUploadFile.name}
-                      </div>
-                      <div className="text-xs text-slate-400 mt-0.5">
-                        {(selectedUploadFile.size / 1024).toFixed(1)} KB — Click to change
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      <div className="font-bold text-sm text-slate-700">
-                        Click to select monthly Excel file
-                      </div>
-                      <div className="text-xs text-slate-400 mt-0.5">
-                        Supports standard hospital billing exports
-                      </div>
-                    </div>
-                  )}
+                  <div className="font-bold text-sm text-slate-700">
+                    Browse or drag &amp; drop your Excel file
+                  </div>
+                  <div className="text-xs text-slate-400">.xlsx or .xls</div>
                 </div>
-              </div>
+              )}
 
-              {/* Upload Mode */}
-              <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  Monthly Import Rule
-                </label>
-                <div className="space-y-2">
-                  <label className="flex items-start gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="uploadReplaceMode"
-                      checked={uploadReplaceMode === 'month'}
-                      onChange={() => setUploadReplaceMode('month')}
-                      className="mt-0.5 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    <div>
-                      <div className="font-bold text-xs text-slate-800">
-                        Replace this month only (Recommended)
-                      </div>
-                      <div className="text-[11px] text-slate-500 mt-0.5">
-                        Overwrites previous data for this specific month without touching any other months.
-                      </div>
-                    </div>
-                  </label>
-
-                  <label className="flex items-start gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="uploadReplaceMode"
-                      checked={uploadReplaceMode === 'append'}
-                      onChange={() => setUploadReplaceMode('append')}
-                      className="mt-0.5 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    <div>
-                      <div className="font-bold text-xs text-slate-800">
-                        Append (Keep existing records)
-                      </div>
-                      <div className="text-[11px] text-slate-500 mt-0.5">
-                        Adds records to the existing database without deleting anything.
-                      </div>
-                    </div>
-                  </label>
-
-                  <label className="flex items-start gap-3 p-3 rounded-xl border border-rose-200 bg-rose-50/40 hover:bg-rose-50 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="uploadReplaceMode"
-                      checked={uploadReplaceMode === 'all'}
-                      onChange={() => setUploadReplaceMode('all')}
-                      className="mt-0.5 text-rose-600 focus:ring-rose-500"
-                    />
-                    <div>
-                      <div className="font-bold text-xs text-rose-800">
-                        Replace All Months
-                      </div>
-                      <div className="text-[11px] text-rose-600/80 mt-0.5">
-                        Clears all existing months and starts fresh with this file.
-                      </div>
-                    </div>
-                  </label>
-                </div>
-              </div>
-
-              {/* Optional Month Override */}
-              <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                  Target Month (Optional Override)
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. August 2026 or September 2026 (leave empty for auto-detect)"
-                  value={uploadCustomMonth}
-                  onChange={(e) => setUploadCustomMonth(e.target.value)}
-                  className="w-full px-3.5 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                />
-                <span className="text-[11px] text-slate-400 mt-1 block">
-                  Leaves auto-detection enabled by default from dates inside the sheet.
-                </span>
-              </div>
-
-              {/* Action buttons */}
               <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-100">
                 <button
                   type="button"
@@ -1040,7 +901,7 @@ export const ShareManagementPage: React.FC = () => {
                   className="flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-sm transition-all disabled:opacity-50"
                 >
                   <Upload className={`w-4 h-4 ${uploading ? 'animate-bounce' : ''}`} />
-                  {uploading ? 'Processing & Computing Shares...' : 'Upload & Compute Shares'}
+                  {uploading ? 'Processing & Calculating Shares...' : 'Upload & Calculate Shares'}
                 </button>
               </div>
             </form>
