@@ -37,6 +37,7 @@ export const ShareManagementPage: React.FC = () => {
   const [pagination, setPagination] = useState({ page: 1, limit: 50, total: 0, totalPages: 1 });
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [exporting, setExporting] = useState(false);
   const [unmatchedList, setUnmatchedList] = useState<UnmatchedServiceItem[]>([]);
   const [showUnmatchedModal, setShowUnmatchedModal] = useState(false);
 
@@ -182,16 +183,55 @@ export const ShareManagementPage: React.FC = () => {
   };
 
   // Export to Excel (Scoped to current month filter or explicit target month)
-  const handleExport = (targetMonth?: string) => {
-    const month = targetMonth !== undefined ? targetMonth : selectedMonth;
-    const params = new URLSearchParams();
-    if (month && month !== 'ALL') params.append('monthKey', month);
-    if (selectedGroup && selectedGroup !== 'ALL') params.append('billingGroup', selectedGroup);
-    if (matchFilter) params.append('isMatched', matchFilter);
-    if (search) params.append('search', search);
-    if (category && category !== 'ALL') params.append('category', category);
+  const handleExport = async (targetMonth?: string) => {
+    try {
+      setExporting(true);
+      showStatus('info', 'Generating Excel export...');
+      const month = targetMonth !== undefined ? targetMonth : selectedMonth;
+      const params: Record<string, string> = {};
+      if (month && month !== 'ALL') params.monthKey = month;
+      if (selectedGroup && selectedGroup !== 'ALL') params.billingGroup = selectedGroup;
+      if (matchFilter) params.isMatched = matchFilter;
+      if (search) params.search = search;
+      if (category && category !== 'ALL') params.category = category;
 
-    window.open(`/api/billing/export?${params.toString()}`, '_blank');
+      const response = await api.get('/billing/export', {
+        params,
+        responseType: 'blob',
+      });
+
+      // Determine appropriate filename
+      let filename = month && month !== 'ALL'
+        ? `Billing_Share_${month.replace(/[\s/\\?%*:|"<>]/g, '_')}.xlsx`
+        : 'Billing_Share_All_Months.xlsx';
+
+      const disposition = response.headers?.['content-disposition'];
+      if (disposition && disposition.includes('filename=')) {
+        const matches = disposition.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/);
+        if (matches && matches[1]) {
+          filename = matches[1].replace(/['"]/g, '').trim();
+        }
+      }
+
+      // Create download anchor and trigger save
+      const blob = new Blob([response.data], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      });
+      const downloadUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.setAttribute('download', filename);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(downloadUrl);
+
+      showStatus('success', `Export downloaded successfully: "${filename}"`);
+    } catch (err: any) {
+      showStatus('error', err.message || 'Failed to export billing Excel');
+    } finally {
+      setExporting(false);
+    }
   };
 
   // Recalculate
@@ -299,7 +339,7 @@ export const ShareManagementPage: React.FC = () => {
 
           <button
             onClick={() => handleExport()}
-            disabled={records.length === 0}
+            disabled={exporting || records.length === 0}
             className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm transition-all shadow-xs disabled:opacity-40"
             title={
               selectedMonth !== 'ALL'
@@ -307,8 +347,8 @@ export const ShareManagementPage: React.FC = () => {
                 : 'Export all months into a single multi-sheet file'
             }
           >
-            <Download className="w-4 h-4 text-emerald-600" />
-            <span>Export Excel</span>
+            <Download className={`w-4 h-4 text-emerald-600 ${exporting ? 'animate-bounce' : ''}`} />
+            <span>{exporting ? 'Exporting...' : 'Export Excel'}</span>
           </button>
 
           <button
