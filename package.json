@@ -1,0 +1,10 @@
+{
+  "name": "hospital-calculation-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hospital Pathology Billing & Share Management Engine",
+  "scripts": {
+    "build": "cd backend && npm install && npm run build",
+    "start": "cd backend && npm start"
+  }
+}
