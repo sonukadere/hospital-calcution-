@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const rawApiUrl = import.meta.env.VITE_API_URL;
+const defaultProdUrl = 'https://hospital-calcution.onrender.com';
+const rawApiUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? defaultProdUrl : '');
 const baseURL = rawApiUrl
   ? (rawApiUrl.endsWith('/api') ? rawApiUrl : `${rawApiUrl.replace(/\/+$/, '')}/api`)
   : '/api';

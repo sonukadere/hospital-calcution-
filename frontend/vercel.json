@@ -1,7 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/:match*",
+      "destination": "https://hospital-calcution.onrender.com/api/:match*"
+    },
+    {
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
