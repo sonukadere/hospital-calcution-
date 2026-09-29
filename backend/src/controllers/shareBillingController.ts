@@ -274,22 +274,29 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
       const normService = normalizeText(serviceName);
       const matchedRate = rateMap.get(normService);
 
-      if (!matchedRate || !matchedRate.masterRate || matchedRate.masterRate <= 0) {
+      let masterRate = 0;
+      let vedaSharePercent = 0;
+      let sodaniSharePercent = 0;
+      let masterAmount = 0;
+      let vedaShare = 0;
+      let sodaniShare = 0;
+      let percent = 'Unmatched (0%)';
+      let isMatched = false;
+
+      if (matchedRate && matchedRate.masterRate && matchedRate.masterRate > 0) {
+        masterRate = matchedRate.masterRate;
+        vedaSharePercent = Math.min(100, Math.max(0, matchedRate.vedaPct));
+        sodaniSharePercent = Math.max(0, 100 - vedaSharePercent);
+        masterAmount = Math.round(masterRate * qty * 100) / 100;
+        vedaShare = Math.round(((masterAmount * vedaSharePercent) / 100) * 100) / 100;
+        sodaniShare = Math.round(((masterAmount * sodaniSharePercent) / 100) * 100) / 100;
+        percent = `Veda: ${vedaSharePercent}% | Sodani: ${sodaniSharePercent}%`;
+        isMatched = true;
+        matchedCount++;
+      } else {
         skippedCount++;
         skippedServicesSet.add(serviceName);
-        continue;
       }
-
-      const masterRate = matchedRate.masterRate;
-      const vedaSharePercent = Math.min(100, Math.max(0, matchedRate.vedaPct));
-      const sodaniSharePercent = Math.max(0, 100 - vedaSharePercent);
-
-      const masterAmount = Math.round(masterRate * qty * 100) / 100;
-      const vedaShare = Math.round(((masterAmount * vedaSharePercent) / 100) * 100) / 100;
-      const sodaniShare = Math.round(((masterAmount * sodaniSharePercent) / 100) * 100) / 100;
-      const percent = `Veda: ${vedaSharePercent}% | Sodani: ${sodaniSharePercent}%`;
-
-      matchedCount++;
 
       recordsToInsert.push({
         sNo,
@@ -313,7 +320,7 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
         sodaniSharePercent,
         vedaShare,
         sodaniShare,
-        isMatched: true,
+        isMatched,
         billingMonth: monthName,
         billingMonthKey: monthKey,
         batchName: req.file!.originalname,
@@ -402,7 +409,6 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
     const allRecords = store.getAllBillingRecords();
     let matchedCount = 0;
     let unmatchedCount = 0;
-    const toRemoveIds: string[] = [];
 
     allRecords.forEach((rec) => {
       const normService = normalizeText(rec.serviceName);
@@ -418,19 +424,19 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
         const sodaniShare = Math.round(((masterAmount * sodaniPct) / 100) * 100) / 100;
         const percent = `Veda: ${vedaPct}% | Sodani: ${sodaniPct}%`;
 
-        // Update in-place via store
         store.updateBillingRecordsForService(rec.serviceName, matched.masterRate, vedaPct, sodaniPct);
       } else {
         unmatchedCount++;
-        toRemoveIds.push(rec._id);
+        rec.masterRate = 0;
+        rec.masterAmount = 0;
+        rec.vedaSharePercent = 0;
+        rec.sodaniSharePercent = 0;
+        rec.vedaShare = 0;
+        rec.sodaniShare = 0;
+        rec.percent = 'Unmatched (0%)';
+        rec.isMatched = false;
       }
     });
-
-    // Remove unmatched records from store
-    if (toRemoveIds.length > 0) {
-      const idSet = new Set(toRemoveIds);
-      store.billingRecords = store.billingRecords.filter(r => !idSet.has(r._id));
-    }
 
     return res.json({
       message: 'Recalculation completed successfully',
