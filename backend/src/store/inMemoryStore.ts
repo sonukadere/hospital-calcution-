@@ -8,6 +8,8 @@
  * No database installation required.
  */
 
+import fs from 'fs';
+import path from 'path';
 import masterRatesJson from '../data/masterRates.json';
 
 // Type for the JSON structure
@@ -70,6 +72,35 @@ class InMemoryStore {
 
   constructor() {
     this.seedMasterRates();
+    this.loadBackupBillingRecords();
+  }
+
+  private loadBackupBillingRecords() {
+    try {
+      const backupPath = path.join(__dirname, '../data/billingRecordsBackup.json');
+      if (fs.existsSync(backupPath)) {
+        const raw = fs.readFileSync(backupPath, 'utf8');
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          this.billingRecords = parsed.map((r: any) => ({
+            ...r,
+            rate: r.rate || r.masterRate || 0,
+          }));
+          console.log(`📦 In-Memory Store: Restored ${this.billingRecords.length} billing records from backup`);
+        }
+      }
+    } catch (err) {
+      console.error('Failed to restore billing records from backup:', err);
+    }
+  }
+
+  saveBackupBillingRecords() {
+    try {
+      const backupPath = path.join(__dirname, '../data/billingRecordsBackup.json');
+      fs.writeFileSync(backupPath, JSON.stringify(this.billingRecords, null, 2), 'utf8');
+    } catch (err) {
+      console.error('Failed to save billing records backup:', err);
+    }
   }
 
   private seedMasterRates() {
@@ -225,11 +256,13 @@ class InMemoryStore {
     const now = new Date();
     const newRecords = records.map(r => ({
       ...r,
+      rate: r.rate || r.masterRate || 0,
       _id: generateId(),
       createdAt: now,
       updatedAt: now,
     })) as IBillingShareRecord[];
     this.billingRecords.push(...newRecords);
+    this.saveBackupBillingRecords();
     return newRecords;
   }
 
@@ -375,7 +408,10 @@ class InMemoryStore {
     const page = filter.page || 1;
     const limit = filter.limit || 50;
     const skip = (page - 1) * limit;
-    const paginated = filtered.slice(skip, skip + limit);
+    const paginated = filtered.slice(skip, skip + limit).map(r => ({
+      ...r,
+      rate: r.rate || r.masterRate || 0,
+    }));
 
     return {
       records: paginated,
@@ -394,7 +430,10 @@ class InMemoryStore {
   }
 
   getAllBillingRecords(): IBillingShareRecord[] {
-    return [...this.billingRecords];
+    return this.billingRecords.map(r => ({
+      ...r,
+      rate: r.rate || r.masterRate || 0,
+    }));
   }
 
   getBillingRecordsForExport(filter: {
@@ -436,24 +475,30 @@ class InMemoryStore {
     }
 
     filtered.sort((a, b) => (a.rowIndex || 0) - (b.rowIndex || 0));
-    return filtered;
+    return filtered.map(r => ({
+      ...r,
+      rate: r.rate || r.masterRate || 0,
+    }));
   }
 
   deleteBillingByMonthKeys(monthKeys: string[]): number {
     const before = this.billingRecords.length;
     this.billingRecords = this.billingRecords.filter(r => !monthKeys.includes(r.billingMonthKey));
+    this.saveBackupBillingRecords();
     return before - this.billingRecords.length;
   }
 
   deleteBillingByMonthKey(monthKey: string): number {
     const before = this.billingRecords.length;
     this.billingRecords = this.billingRecords.filter(r => r.billingMonthKey !== monthKey);
+    this.saveBackupBillingRecords();
     return before - this.billingRecords.length;
   }
 
   clearAllBillingRecords(): number {
     const count = this.billingRecords.length;
     this.billingRecords = [];
+    this.saveBackupBillingRecords();
     return count;
   }
 
@@ -475,6 +520,7 @@ class InMemoryStore {
 
         this.billingRecords[idx] = {
           ...rec,
+          rate: masterRate || rec.rate || 0,
           masterRate,
           masterAmount,
           vedaSharePercent: vedaPct,
@@ -488,6 +534,7 @@ class InMemoryStore {
         updated++;
       }
     });
+    this.saveBackupBillingRecords();
     return updated;
   }
 
@@ -499,6 +546,7 @@ class InMemoryStore {
       if (regex.test(rec.serviceName)) {
         this.billingRecords[idx] = {
           ...rec,
+          rate: 0,
           masterRate: 0,
           masterAmount: 0,
           vedaSharePercent: 0,
@@ -511,6 +559,7 @@ class InMemoryStore {
         updated++;
       }
     });
+    this.saveBackupBillingRecords();
     return updated;
   }
 
@@ -518,6 +567,7 @@ class InMemoryStore {
     this.billingRecords.forEach((rec, idx) => {
       this.billingRecords[idx] = {
         ...rec,
+        rate: 0,
         masterRate: 0,
         masterAmount: 0,
         vedaSharePercent: 0,
@@ -529,6 +579,7 @@ class InMemoryStore {
         updatedAt: new Date(),
       };
     });
+    this.saveBackupBillingRecords();
   }
 
   getUnmatchedServices(): { serviceName: string; occurrenceCount: number; sampleRate: number; totalQty: number }[] {

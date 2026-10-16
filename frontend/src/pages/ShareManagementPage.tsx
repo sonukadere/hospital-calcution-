@@ -681,20 +681,20 @@ export const ShareManagementPage: React.FC = () => {
               <thead className="bg-slate-50 text-slate-600 border-b border-slate-200 uppercase font-bold tracking-wider sticky top-0">
                 <tr>
                   <th className="py-3 px-4 text-center">SNo</th>
-                  <th className="py-3 px-4">Billing Group</th>
-                  <th className="py-3 px-4">Bill/Service Date</th>
-                  <th className="py-3 px-4">Bill No.</th>
-                  <th className="py-3 px-4">Visit ID</th>
-                  <th className="py-3 px-4">Patient Name</th>
-                  <th className="py-3 px-4">Service Name</th>
+                  <th className="py-3 px-4 text-center">Billing Group</th>
+                  <th className="py-3 px-4 text-center">Bill/Service Date</th>
+                  <th className="py-3 px-4 text-center">Bill No.</th>
+                  <th className="py-3 px-4 text-center">Visit ID</th>
+                  <th className="py-3 px-4 text-center">Patient Name</th>
+                  <th className="py-3 px-4 text-center">Service Name</th>
                   <th className="py-3 px-4 text-center">Qty</th>
-                  <th className="py-3 px-4 text-right">Total Amt</th>
-                  <th className="py-3 px-4 text-right">Disc Amt</th>
-                  <th className="py-3 px-4 text-right">Net Amt</th>
-                  <th className="py-3 px-4 text-right">Rate</th>
+                  <th className="py-3 px-4 text-center">Total Amt</th>
+                  <th className="py-3 px-4 text-center">Disc Amt</th>
+                  <th className="py-3 px-4 text-center">Net Amt</th>
+                  <th className="py-3 px-4 text-center">Rate</th>
                   <th className="py-3 px-4 text-center">%</th>
-                  <th className="py-3 px-4 text-right text-blue-700 bg-blue-50/40">Veda Share</th>
-                  <th className="py-3 px-4 text-right text-emerald-700 bg-emerald-50/40">Sodani Share</th>
+                  <th className="py-3 px-4 text-center text-blue-700 bg-blue-50/40">Veda Share</th>
+                  <th className="py-3 px-4 text-center text-emerald-700 bg-emerald-50/40">Sodani Share</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
@@ -712,35 +712,35 @@ export const ShareManagementPage: React.FC = () => {
                       </td>
 
                       {/* Billing Group */}
-                      <td className="py-3 px-4 font-semibold text-slate-800">
+                      <td className="py-3 px-4 font-semibold text-slate-800 text-center">
                         <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200 text-[11px]">
                           {r.billingGroup || '—'}
                         </span>
                       </td>
 
                       {/* Bill/Service Date */}
-                      <td className="py-3 px-4 font-mono text-slate-600">
+                      <td className="py-3 px-4 font-mono text-slate-600 text-center">
                         {r.billServiceDate || '—'}
                       </td>
 
                       {/* Bill No. */}
-                      <td className="py-3 px-4 font-mono font-semibold text-slate-900">
+                      <td className="py-3 px-4 font-mono font-semibold text-slate-900 text-center">
                         {r.billNo || '—'}
                       </td>
 
                       {/* Visit ID */}
-                      <td className="py-3 px-4 font-mono text-slate-600">
+                      <td className="py-3 px-4 font-mono text-slate-600 text-center">
                         {r.visitId || '—'}
                       </td>
 
                       {/* Patient Name */}
-                      <td className="py-3 px-4 font-semibold text-slate-900 uppercase">
+                      <td className="py-3 px-4 font-semibold text-slate-900 uppercase text-center">
                         {r.patientName || '—'}
                       </td>
 
                       {/* Service Name & Match badge */}
-                      <td className="py-3 px-4">
-                        <div className="flex items-center gap-2">
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center gap-2">
                           <span className="font-semibold text-slate-900 uppercase">{r.serviceName}</span>
                           {/(^|\s|\/)CT(\s|\/|$)/i.test(r.serviceName) ? (
                             <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-blue-50 text-blue-700 border border-blue-200 shrink-0">
@@ -761,7 +761,7 @@ export const ShareManagementPage: React.FC = () => {
                                 setQuickRateModal({
                                   open: true,
                                   serviceName: r.serviceName,
-                                  rate: r.rate || 0,
+                                  rate: r.rate || r.masterRate || 0,
                                   vedaPct: 0,
                                   sodaniPct: 100,
                                 })
@@ -782,23 +782,23 @@ export const ShareManagementPage: React.FC = () => {
                       </td>
 
                       {/* Total Amt */}
-                      <td className="py-3 px-4 text-right font-mono text-slate-600">
+                      <td className="py-3 px-4 text-center font-mono text-slate-600">
                         ₹{r.totalAmt.toLocaleString()}
                       </td>
 
                       {/* Disc Amt */}
-                      <td className="py-3 px-4 text-right font-mono text-slate-500">
+                      <td className="py-3 px-4 text-center font-mono text-slate-500">
                         ₹{r.discAmt.toLocaleString()}
                       </td>
 
                       {/* Net Amt */}
-                      <td className="py-3 px-4 text-right font-mono font-bold text-slate-900">
+                      <td className="py-3 px-4 text-center font-mono font-bold text-slate-900">
                         ₹{r.netAmt.toLocaleString()}
                       </td>
 
                       {/* Rate */}
-                      <td className="py-3 px-4 text-right font-mono text-slate-600">
-                        ₹{r.rate.toLocaleString()}
+                      <td className="py-3 px-4 text-center font-mono text-slate-600">
+                        {(r.rate || r.masterRate) > 0 ? `₹${(r.rate || r.masterRate).toLocaleString()}` : '—'}
                       </td>
 
                       {/* % */}
@@ -807,12 +807,12 @@ export const ShareManagementPage: React.FC = () => {
                       </td>
 
                       {/* Veda Share */}
-                      <td className="py-3 px-4 text-right font-mono font-bold text-blue-700 bg-blue-50/20">
+                      <td className="py-3 px-4 text-center font-mono font-bold text-blue-700 bg-blue-50/20">
                         ₹{r.vedaShare.toLocaleString()}
                       </td>
 
                       {/* Sodani Share */}
-                      <td className="py-3 px-4 text-right font-mono font-bold text-emerald-700 bg-emerald-50/20">
+                      <td className="py-3 px-4 text-center font-mono font-bold text-emerald-700 bg-emerald-50/20">
                         ₹{r.sodaniShare.toLocaleString()}
                       </td>
                     </tr>

@@ -312,7 +312,7 @@ export const uploadAndProcessExcel = async (req: Request, res: Response) => {
         totalAmt,
         discAmt,
         netAmt,
-        rate,
+        rate: masterRate > 0 ? masterRate : rate,
         percent,
         masterRate,
         masterAmount,
@@ -424,9 +424,11 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
         const sodaniShare = Math.round(((masterAmount * sodaniPct) / 100) * 100) / 100;
         const percent = `Veda: ${vedaPct}% | Sodani: ${sodaniPct}%`;
 
+        rec.rate = matched.masterRate;
         store.updateBillingRecordsForService(rec.serviceName, matched.masterRate, vedaPct, sodaniPct);
       } else {
         unmatchedCount++;
+        rec.rate = 0;
         rec.masterRate = 0;
         rec.masterAmount = 0;
         rec.vedaSharePercent = 0;
@@ -448,6 +450,89 @@ export const recalculateAllBilling = async (_req: Request, res: Response) => {
     return res.status(500).json({ error: error.message || 'Error recalculating billing shares' });
   }
 };
+
+/**
+ * Center-align all columns, cells and headers in the generated Excel workbook buffer
+ * by updating OpenXML styles.xml and worksheet cell/col styles.
+ */
+function applyCenterAlignmentToExcel(rawBuffer: Buffer): Buffer {
+  try {
+    const cfb = (xlsx as any).CFB.read(rawBuffer, { type: 'buffer' });
+    if (!cfb || !cfb.FileIndex || !cfb.FullPaths) return rawBuffer;
+
+    // 1. Locate styles.xml
+    let stylesFileIndex = -1;
+    for (let i = 0; i < cfb.FileIndex.length; i++) {
+      const fullPath = (cfb.FullPaths[i] || '').toLowerCase();
+      const name = (cfb.FileIndex[i]?.name || '').toLowerCase();
+      if (name === 'styles.xml' || fullPath.endsWith('styles.xml')) {
+        stylesFileIndex = i;
+        break;
+      }
+    }
+
+    if (stylesFileIndex === -1) return rawBuffer;
+
+    const stylesEntry = cfb.FileIndex[stylesFileIndex];
+    let stylesXml = Buffer.isBuffer(stylesEntry.content)
+      ? stylesEntry.content.toString('utf8')
+      : String(stylesEntry.content || '');
+
+    const cellXfsRegex = /<cellXfs\s+count="(\d+)">([\s\S]*?)<\/cellXfs>/;
+    const match = stylesXml.match(cellXfsRegex);
+    if (!match) return rawBuffer;
+
+    const currentCount = parseInt(match[1], 10);
+    const centerStyleIndex = currentCount; // New style is at index currentCount
+    const newXf = `<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment horizontal="center" vertical="center"/></xf>`;
+
+    stylesXml = stylesXml.replace(cellXfsRegex, `<cellXfs count="${currentCount + 1}">$2${newXf}</cellXfs>`);
+    stylesEntry.content = Buffer.from(stylesXml, 'utf8');
+    stylesEntry.size = stylesEntry.content.length;
+
+    // Match all cells in all columns (e.g. A1, G2, I5, N10, etc.)
+    const cellRegex = /<c\s+r="([A-Z]+\d+)"([^>]*?)(\/?)>/g;
+
+    // 2. Modify all worksheet XML files
+    for (let i = 0; i < cfb.FileIndex.length; i++) {
+      const fullPath = (cfb.FullPaths[i] || '').toLowerCase();
+      const name = (cfb.FileIndex[i]?.name || '').toLowerCase();
+      if (fullPath.includes('worksheets') && (name.endsWith('.xml') || fullPath.endsWith('.xml'))) {
+        const sheetEntry = cfb.FileIndex[i];
+        let sheetXml = Buffer.isBuffer(sheetEntry.content)
+          ? sheetEntry.content.toString('utf8')
+          : String(sheetEntry.content || '');
+
+        // Update all cells with center style index
+        sheetXml = sheetXml.replace(cellRegex, (fullMatch: string, ref: string, rest: string, slash: string) => {
+          if (/ s="\d+"/.test(rest)) {
+            return fullMatch.replace(/ s="\d+"/, ` s="${centerStyleIndex}"`);
+          } else {
+            return `<c r="${ref}" s="${centerStyleIndex}"${rest}${slash ? '/>' : '>'}`;
+          }
+        });
+
+        // Also update column definitions to center
+        sheetXml = sheetXml.replace(/<col\s+([^>]*?)(\/?)>/g, (fullMatch: string, rest: string, slash: string) => {
+          if (/ style="\d+"/.test(rest)) {
+            return fullMatch.replace(/ style="\d+"/, ` style="${centerStyleIndex}"`);
+          } else {
+            return `<col style="${centerStyleIndex}" ${rest}${slash ? '/>' : '>'}`;
+          }
+        });
+
+        sheetEntry.content = Buffer.from(sheetXml, 'utf8');
+        sheetEntry.size = sheetEntry.content.length;
+      }
+    }
+
+    const modifiedBuffer = (xlsx as any).CFB.write(cfb, { type: 'buffer', fileType: 'zip' });
+    return Buffer.isBuffer(modifiedBuffer) ? modifiedBuffer : Buffer.from(modifiedBuffer);
+  } catch (err) {
+    console.error('applyCenterAlignmentToExcel error:', err);
+    return rawBuffer;
+  }
+}
 
 // Export records to Excel (.xlsx) (In-Memory)
 export const exportBillingExcel = async (req: Request, res: Response) => {
@@ -475,7 +560,7 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
       { wch: 12 }, // Disc Amt
       { wch: 14 }, // Net Amt
       { wch: 12 }, // Rate
-      { wch: 10 }, // %
+      { wch: 30 }, // %
       { wch: 16 }, // Veda Share
       { wch: 16 }, // Sodani Share
     ];
@@ -508,7 +593,7 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
           'Total Amt': rec.totalAmt,
           'Disc Amt': rec.discAmt,
           'Net Amt': rec.netAmt,
-          'Rate': rec.rate,
+          'Rate': rec.rate || rec.masterRate || '',
           '%': rec.percent,
           'Veda Share': rec.vedaShare,
           'Sodani Share': rec.sodaniShare,
@@ -572,7 +657,8 @@ export const exportBillingExcel = async (req: Request, res: Response) => {
       filename = `Billing_Share_All_Months_${new Date().toISOString().slice(0, 10)}.xlsx`;
     }
 
-    const buffer = xlsx.write(workbook, { type: 'buffer', bookType: 'xlsx' });
+    const rawBuffer = xlsx.write(workbook, { type: 'buffer', bookType: 'xlsx' });
+    const buffer = applyCenterAlignmentToExcel(rawBuffer);
 
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
